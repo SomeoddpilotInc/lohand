@@ -1,0 +1,30 @@
+{
+  "name": "lohand",
+  "version": "0.0.0",
+  "description": "A library for wrapping Lodash functions into Handlebars",
+  "readme": "`npm install lohand -S`",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -C"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:alexsomeoddpilot/lohand.git"
+  },
+  "keywords": [
+    "lodash",
+    "handlebars"
+  ],
+  "author": "Alex Robertson <alex@someoddpilot.com>",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/alexsomeoddpilot/lohand/issues"
+  },
+  "homepage": "https://github.com/alexsomeoddpilot/lohand",
+  "dependencies": {
+    "lodash": "^3.6.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  }
+}
