@@ -30,6 +30,9 @@ const stringHelpers = _(stringHelperWhitelist)
 
 const customHelpersWhitelist = [
   'encodeURIComponent',
+  'eq',
+  'iter',
+  'possessive',
   'urlify'
 ];
 
