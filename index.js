@@ -28,8 +28,21 @@ const stringHelpers = _(stringHelperWhitelist)
   })
   .value();
 
-const helpers = _.merge(
-  stringHelpers
+const customHelpersWhitelist = [
+  'encodeURIComponent',
+  'urlify'
+];
+
+const customHelpers = _(customHelpersWhitelist)
+  .transform(function (result, helperName) {
+    result[helperName] = require('./lib/' + helperName);
+  })
+  .value();
+
+const helpers = _.extend(
+  {},
+  stringHelpers,
+  customHelpers
 );
 
 module.exports = {
