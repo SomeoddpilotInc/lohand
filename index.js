@@ -43,7 +43,9 @@ const customHelpers = _(customHelpersWhitelist)
   .value();
 
 const helpers = _.extend(
-  {},
+  {
+    'title-case': stringHelpers.startCase
+  },
   stringHelpers,
   customHelpers
 );
