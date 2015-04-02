@@ -16,8 +16,25 @@
     "url": "git@github.com:alexsomeoddpilot/lohand.git"
   },
   "keywords": [
+    "block helper",
+    "code helpers",
+    "collections helpers",
+    "comparisons helpers",
+    "handle bars js",
+    "handlebar helper",
+    "handlebars block helper",
+    "handlebars escape",
+    "handlebars unescape",
+    "handlebars for loop",
+    "handlebars helper",
+    "handlebars helpers",
+    "handlebars iter helpers",
+    "handlebars",
+    "html helpers",
+    "numbers helpers",
     "lodash",
-    "handlebars"
+    "strings helpers",
+    "url helpers"
   ],
   "author": "Alex Robertson <alex@someoddpilot.com>",
   "license": "GNU",
