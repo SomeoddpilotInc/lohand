@@ -4,6 +4,10 @@
   "description": "A library for wrapping Lodash functions into Handlebars",
   "readme": "`npm install lohand -S`",
   "main": "index.js",
+  "contributors": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "scripts": {
     "test": "mocha -C"
   },
