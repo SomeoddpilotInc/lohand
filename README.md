@@ -1,6 +1,8 @@
 # Lohand
 
 [![Build Status](https://travis-ci.org/alexsomeoddpilot/lohand.svg?branch=master)](https://travis-ci.org/alexsomeoddpilot/lohand)
+[![Dependency Status](https://david-dm.org/alexsomeoddpilot/lohand.svg)](https://david-dm.org/alexsomeoddpilot/lohand)
+[![devDependency Status](https://david-dm.org/alexsomeoddpilot/lohand/dev-status.svg)](https://david-dm.org/alexsomeoddpilot/lohand#info=devDependencies)
 
 A library for wrapping many Lodash functions into Handlebars.
 
