@@ -4,7 +4,6 @@ const stringHelperWhitelist = [
   'camelCase',
   'capitalize',
   'deburr',
-  'endsWith',
   'kebabCase',
   'pad',
   'padLeft',
@@ -30,6 +29,7 @@ const stringHelpers = _(stringHelperWhitelist)
 
 const customHelpersWhitelist = [
   'encodeURIComponent',
+  'endsWith',
   'eq',
   'iter',
   'possessive',
