@@ -52,14 +52,39 @@ npm test
 {{deburr 'déjà vu'}} // deja vu
 ```
 
+### encodeURIComponent
+
+```handlebars
+{{encodeURIComponent 'Foo Bar'}} // Foo%20Bar
+```
+
 ### endsWith
 
 ```handlebars
-{{endsWith 'abc' 'c'}}
+{{#endsWith 'abc' 'c'}}
   // string starts with 'c'
 {{else}}
   // string does not start with 'c'
 {{/endsWith}}
+```
+
+### eq
+
+```handlebars
+{{#eq val1 val2}}
+  // ===
+{{else}}
+  // !==
+{{/eq}}
+```
+
+### iter
+
+```handlebars
+{{#iter items}}
+    {{i}} // index
+    {{iPlus1}} // index + 1
+{{/iter}}
 ```
 
 ### kebabCase
@@ -95,6 +120,13 @@ npm test
 {{parseInt '08'}} // 8
 ```
 
+### possessive
+
+```handlebars
+{{possessive 'Susan'}} // Susan’s
+{{possessive 'Chris'}} // Chris’
+```
+
 ### repeat
 
 ```handlebars
@@ -116,7 +148,7 @@ npm test
 ### startsWith
 
 ```handlebars
-{{startsWith 'abc' 'a'}}
+{{#startsWith 'abc' 'a'}}
   // if 'abc' starts with 'a'
 {{else}}
   // if 'abc' does not start with 'a'
@@ -155,4 +187,10 @@ npm test
 
 ```handlebars
 {{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
+```
+
+### urlify
+
+```handlebars
+{{urlify 'Hey Hey'}} // hey-hey
 ```
