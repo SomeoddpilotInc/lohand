@@ -12,7 +12,6 @@ const stringHelperWhitelist = [
   'repeat',
   'snakeCase',
   'startCase',
-  'startsWith',
   'trim',
   'trimLeft',
   'trimRight',
@@ -33,6 +32,7 @@ const customHelpersWhitelist = [
   'eq',
   'iter',
   'possessive',
+  'startsWith',
   'urlify'
 ];
 
