@@ -19,171 +19,116 @@
 <a href="https://david-dm.org/alexsomeoddpilot/lohand#info=devDependencies"><img src="https://camo.githubusercontent.com/d5d6d4af83216e2c5ec481ceaa65a843f15fa707/68747470733a2f2f64617669642d646d2e6f72672f616c6578736f6d656f646470696c6f742f6c6f68616e642f6465762d7374617475732e737667" alt="devDependency Status" data-canonical-src="https://david-dm.org/alexsomeoddpilot/lohand/dev-status.svg" style="max-width:100%;"></a></p>
 
 <p>A library for wrapping many Lodash functions into Handlebars.</p>
+<h2 id="installation">Installation</h2>
+<pre><code class="lang-bash">npm install lohand
+</code></pre>
+<h2 id="basic-setup">Basic Setup</h2>
+<pre><code class="lang-bash">var handlebars = require(&#39;handlebars&#39;);
+require(&#39;lohand&#39;)
+  .register(handlebars);
+</code></pre>
+<h3 id="individual-helpers">Individual Helpers</h3>
+<pre><code class="lang-bash">var lohand = require(&#39;lohand&#39;);
 
-<h2>
-<a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
-
-<div class="highlight highlight-bash"><pre>npm install lohand</pre></div>
-
-<h2>
-<a id="user-content-basic-setup" class="anchor" href="#basic-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Setup</h2>
-
-<div class="highlight highlight-bash"><pre>var handlebars = require(<span class="pl-s"><span class="pl-pds">'</span>handlebars<span class="pl-pds">'</span></span>)<span class="pl-k">;</span>
-require(<span class="pl-s"><span class="pl-pds">'</span>lohand<span class="pl-pds">'</span></span>)
-  .register(handlebars)<span class="pl-k">;</span></pre></div>
-
-<h3>
-<a id="user-content-individual-helpers" class="anchor" href="#individual-helpers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Individual Helpers</h3>
-
-<div class="highlight highlight-bash"><pre>var lohand = require(<span class="pl-s"><span class="pl-pds">'</span>lohand<span class="pl-pds">'</span></span>)<span class="pl-k">;</span>
-
-lohand.helpers<span class="pl-k">;</span> // a dictionary of helpers { name: <span class="pl-en">fn</span>() {} }</pre></div>
-
-<h2>
-<a id="user-content-testing" class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h2>
-
-<div class="highlight highlight-bash"><pre>npm <span class="pl-c1">test</span></pre></div>
-
-<h2>
-<a id="user-content-helpers" class="anchor" href="#helpers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Helpers</h2>
-
-<h3>
-<a id="user-content-camelcase" class="anchor" href="#camelcase" aria-hidden="true"><span class="octicon octicon-link"></span></a>camelCase</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">camelCase</span> <span class="pl-s"><span class="pl-pds">'</span>Foo Bar<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // Foo Bar</pre></div>
-
-<h3>
-<a id="user-content-capitalize" class="anchor" href="#capitalize" aria-hidden="true"><span class="octicon octicon-link"></span></a>capitalize</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">capitalize</span> <span class="pl-s"><span class="pl-pds">'</span>foo bar<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // Foo bar</pre></div>
-
-<h3>
-<a id="user-content-deburr" class="anchor" href="#deburr" aria-hidden="true"><span class="octicon octicon-link"></span></a>deburr</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">deburr</span> <span class="pl-s"><span class="pl-pds">'</span>déjà vu<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // deja vu</pre></div>
-
-<h3>
-<a id="user-content-encodeuricomponent" class="anchor" href="#encodeuricomponent" aria-hidden="true"><span class="octicon octicon-link"></span></a>encodeURIComponent</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">encodeURIComponent</span> <span class="pl-s"><span class="pl-pds">'</span>Foo Bar<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // Foo%20Bar</pre></div>
-
-<h3>
-<a id="user-content-endswith" class="anchor" href="#endswith" aria-hidden="true"><span class="octicon octicon-link"></span></a>endsWith</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{#endsWith</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>c<span class="pl-pds">'</span></span><span class="pl-c1">}}</span>
-  // string starts with 'c'
-<span class="pl-c1">{{</span><span class="pl-v">else</span><span class="pl-c1">}}</span>
-  // string does not start with 'c'
-<span class="pl-c1">{{/endsWith}}</span></pre></div>
-
-<h3>
-<a id="user-content-eq" class="anchor" href="#eq" aria-hidden="true"><span class="octicon octicon-link"></span></a>eq</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{#eq</span> <span class="pl-v">val1</span> <span class="pl-c1">val2}}</span>
+lohand.helpers; // a dictionary of helpers { name: fn() {} }
+</code></pre>
+<h2 id="testing">Testing</h2>
+<pre><code class="lang-bash">npm test
+</code></pre>
+<h2 id="helpers">Helpers</h2>
+<h3 id="camelcase">camelCase</h3>
+<pre><code class="lang-handlebars">{{camelCase &#39;Foo Bar&#39;}} // Foo Bar
+</code></pre>
+<h3 id="capitalize">capitalize</h3>
+<pre><code class="lang-handlebars">{{capitalize &#39;foo bar&#39;}} // Foo bar
+</code></pre>
+<h3 id="deburr">deburr</h3>
+<pre><code class="lang-handlebars">{{deburr &#39;déjà vu&#39;}} // deja vu
+</code></pre>
+<h3 id="encodeuricomponent">encodeURIComponent</h3>
+<pre><code class="lang-handlebars">{{encodeURIComponent &#39;Foo Bar&#39;}} // Foo%20Bar
+</code></pre>
+<h3 id="endswith">endsWith</h3>
+<pre><code class="lang-handlebars">{{#endsWith &#39;abc&#39; &#39;c&#39;}}
+  // string starts with &#39;c&#39;
+{{else}}
+  // string does not start with &#39;c&#39;
+{{/endsWith}}
+</code></pre>
+<h3 id="eq">eq</h3>
+<pre><code class="lang-handlebars">{{#eq val1 val2}}
   // ===
-<span class="pl-c1">{{</span><span class="pl-v">else</span><span class="pl-c1">}}</span>
+{{else}}
   // !==
-<span class="pl-c1">{{/eq}}</span></pre></div>
+{{/eq}}
+</code></pre>
+<h3 id="iter">iter</h3>
+<pre><code class="lang-handlebars">{{#iter items}}
+    {{i}} // index
+    {{iPlus1}} // index + 1
+{{/iter}}
+</code></pre>
+<h3 id="kebabcase">kebabCase</h3>
+<pre><code class="lang-handlebars">{{kebabCase &#39;Foo Bar&#39;}} // &#39;foo-bar&#39;
+</code></pre>
+<h3 id="pad">pad</h3>
+<pre><code class="lang-handlebars">{{pad &#39;abc&#39; 8}} // &#39;  abc   &#39;
+{{pad &#39;abc&#39; 8 &#39;_-&#39;}} // _-abc_-_
+</code></pre>
+<h3 id="padleft">padLeft</h3>
+<pre><code class="lang-handlebars">{{padLeft &#39;abc&#39; 6}} // &#39;   abc&#39;
+{{padLeft &#39;abc&#39; 6 &#39;_-&#39;}} // _-_abc
+</code></pre>
+<h3 id="padright">padRight</h3>
+<pre><code class="lang-handlebars">{{padRight &#39;abc&#39; 6}} // &#39;abc   &#39;
+{{padRight &#39;abc&#39; 6 &#39;_-&#39;}} // abc_-_
+</code></pre>
+<h3 id="parseint">parseInt</h3>
+<pre><code class="lang-handlebars">{{parseInt &#39;08&#39;}} // 8
+</code></pre>
+<h3 id="possessive">possessive</h3>
+<pre><code class="lang-handlebars">{{possessive &#39;Susan&#39;}} // Susan’s
+{{possessive &#39;Chris&#39;}} // Chris’
+</code></pre>
+<h3 id="repeat">repeat</h3>
+<pre><code class="lang-handlebars">{{repeat &#39;*&#39; 3}} // ***
+</code></pre>
+<h3 id="snakecase">snakeCase</h3>
+<pre><code class="lang-handlebars">{{snakeCase &#39;Foo Bar&#39;}} // foo_bar
+</code></pre>
+<h3 id="startcase">startCase</h3>
+<pre><code class="lang-handlebars">{{startCase &#39;--foo-bar&#39;}} // Foo Bar
+</code></pre>
+<h3 id="startswith">startsWith</h3>
+<pre><code class="lang-handlebars">{{#startsWith &#39;abc&#39; &#39;a&#39;}}
+  // if &#39;abc&#39; starts with &#39;a&#39;
+{{else}}
+  // if &#39;abc&#39; does not start with &#39;a&#39;
+{{/startsWith}}
+</code></pre>
+<h3 id="trim">trim</h3>
+<pre><code class="lang-handlebars">{{trim &#39;  abc  &#39;}} // abc
+{{trim &#39;-_-abc-_-&#39; &#39;_-&#39;}} // abc
+</code></pre>
+<h3 id="trimleft">trimLeft</h3>
+<pre><code class="lang-handlebars">{{trimLeft &#39;  ab9;}} // &#39;abc  &#39;
+{{trimLeft &#39;-_-abc-_-&#39; &#39;_-&#39;}} // abc-_-
+</code></pre>
+<h3 id="trimright">trimRight</h3>
+<pre><code class="lang-handlebars">{{trimRight &#39;  abc  &#39;}} // &#39;  abc&#39;
+{{trimRight &#39;-_-abc-_-&#39; &#39;_-&#39;}} // -_-abc
+</code></pre>
+<h3 id="trunc">trunc</h3>
+<pre><code class="lang-handlebars">{{trunc &#39;hi-diddly-ho there, neighborino&#39;}} // hi-diddly-ho there, neighbo...
+{{trunc &#39;hi-diddly-ho there, neighborino&#39; 24}} // hi-diddly-ho there, n...
+</code></pre>
+<h3 id="unescape">unescape</h3>
+<pre><code class="lang-handlebars">{{unescape &#39;fred, barney, &amp;amp; pebbles&#39;}} // fred, barney, &amp; pebbles
+</code></pre>
+<h3 id="urlify">urlify</h3>
+<pre><code class="lang-handlebars">{{urlify &#39;Hey Hey&#39;}} // hey-hey
+</code></pre>
 
-<h3>
-<a id="user-content-iter" class="anchor" href="#iter" aria-hidden="true"><span class="octicon octicon-link"></span></a>iter</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{#iter</span> <span class="pl-v">items</span><span class="pl-c1">}}</span>
-    <span class="pl-c1">{{</span><span class="pl-v">i</span><span class="pl-c1">}}</span> // index
-    <span class="pl-c1">{{</span><span class="pl-v">iPlus1</span><span class="pl-c1">}}</span> // index + 1
-<span class="pl-c1">{{/iter}}</span></pre></div>
-
-<h3>
-<a id="user-content-kebabcase" class="anchor" href="#kebabcase" aria-hidden="true"><span class="octicon octicon-link"></span></a>kebabCase</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">kebabCase</span> <span class="pl-s"><span class="pl-pds">'</span>Foo Bar<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // 'foo-bar'</pre></div>
-
-<h3>
-<a id="user-content-pad" class="anchor" href="#pad" aria-hidden="true"><span class="octicon octicon-link"></span></a>pad</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">pad</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> 8<span class="pl-c1">}}</span> // '  abc   '
-<span class="pl-c1">{{</span><span class="pl-v">pad</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> 8 <span class="pl-s"><span class="pl-pds">'</span>_-<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // _-abc_-_</pre></div>
-
-<h3>
-<a id="user-content-padleft" class="anchor" href="#padleft" aria-hidden="true"><span class="octicon octicon-link"></span></a>padLeft</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">padLeft</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> 6<span class="pl-c1">}}</span> // '   abc'
-<span class="pl-c1">{{</span><span class="pl-v">padLeft</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> 6 <span class="pl-s"><span class="pl-pds">'</span>_-<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // _-_abc</pre></div>
-
-<h3>
-<a id="user-content-padright" class="anchor" href="#padright" aria-hidden="true"><span class="octicon octicon-link"></span></a>padRight</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">padRight</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> 6<span class="pl-c1">}}</span> // 'abc   '
-<span class="pl-c1">{{</span><span class="pl-v">padRight</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> 6 <span class="pl-s"><span class="pl-pds">'</span>_-<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // abc_-_</pre></div>
-
-<h3>
-<a id="user-content-parseint" class="anchor" href="#parseint" aria-hidden="true"><span class="octicon octicon-link"></span></a>parseInt</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">parseInt</span> <span class="pl-s"><span class="pl-pds">'</span>08<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // 8</pre></div>
-
-<h3>
-<a id="user-content-possessive" class="anchor" href="#possessive" aria-hidden="true"><span class="octicon octicon-link"></span></a>possessive</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">possessive</span> <span class="pl-s"><span class="pl-pds">'</span>Susan<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // Susan’s
-<span class="pl-c1">{{</span><span class="pl-v">possessive</span> <span class="pl-s"><span class="pl-pds">'</span>Chris<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // Chris’</pre></div>
-
-<h3>
-<a id="user-content-repeat" class="anchor" href="#repeat" aria-hidden="true"><span class="octicon octicon-link"></span></a>repeat</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">repeat</span> <span class="pl-s"><span class="pl-pds">'</span>*<span class="pl-pds">'</span></span> 3<span class="pl-c1">}}</span> // ***</pre></div>
-
-<h3>
-<a id="user-content-snakecase" class="anchor" href="#snakecase" aria-hidden="true"><span class="octicon octicon-link"></span></a>snakeCase</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">snakeCase</span> <span class="pl-s"><span class="pl-pds">'</span>Foo Bar<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // foo_bar</pre></div>
-
-<h3>
-<a id="user-content-startcase" class="anchor" href="#startcase" aria-hidden="true"><span class="octicon octicon-link"></span></a>startCase</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">startCase</span> <span class="pl-s"><span class="pl-pds">'</span>--foo-bar<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // Foo Bar</pre></div>
-
-<h3>
-<a id="user-content-startswith" class="anchor" href="#startswith" aria-hidden="true"><span class="octicon octicon-link"></span></a>startsWith</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{#startsWith</span> <span class="pl-s"><span class="pl-pds">'</span>abc<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>a<span class="pl-pds">'</span></span><span class="pl-c1">}}</span>
-  // if 'abc' starts with 'a'
-<span class="pl-c1">{{</span><span class="pl-v">else</span><span class="pl-c1">}}</span>
-  // if 'abc' does not start with 'a'
-<span class="pl-c1">{{/startsWith}}</span></pre></div>
-
-<h3>
-<a id="user-content-trim" class="anchor" href="#trim" aria-hidden="true"><span class="octicon octicon-link"></span></a>trim</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">trim</span> <span class="pl-s"><span class="pl-pds">'</span>  abc  <span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // abc
-<span class="pl-c1">{{</span><span class="pl-v">trim</span> <span class="pl-s"><span class="pl-pds">'</span>-_-abc-_-<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>_-<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // abc</pre></div>
-
-<h3>
-<a id="user-content-trimleft" class="anchor" href="#trimleft" aria-hidden="true"><span class="octicon octicon-link"></span></a>trimLeft</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">trimLeft</span> <span class="pl-s"><span class="pl-pds">'</span>  abc  <span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // 'abc  '
-<span class="pl-c1">{{</span><span class="pl-v">trimLeft</span> <span class="pl-s"><span class="pl-pds">'</span>-_-abc-_-<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>_-<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // abc-_-</pre></div>
-
-<h3>
-<a id="user-content-trimright" class="anchor" href="#trimright" aria-hidden="true"><span class="octicon octicon-link"></span></a>trimRight</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">trimRight</span> <span class="pl-s"><span class="pl-pds">'</span>  abc  <span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // '  abc'
-<span class="pl-c1">{{</span><span class="pl-v">trimRight</span> <span class="pl-s"><span class="pl-pds">'</span>-_-abc-_-<span class="pl-pds">'</span></span> <span class="pl-s"><span class="pl-pds">'</span>_-<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // -_-abc</pre></div>
-
-<h3>
-<a id="user-content-trunc" class="anchor" href="#trunc" aria-hidden="true"><span class="octicon octicon-link"></span></a>trunc</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">trunc</span> <span class="pl-s"><span class="pl-pds">'</span>hi-diddly-ho there, neighborino<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // hi-diddly-ho there, neighbo...
-<span class="pl-c1">{{</span><span class="pl-v">trunc</span> <span class="pl-s"><span class="pl-pds">'</span>hi-diddly-ho there, neighborino<span class="pl-pds">'</span></span> 24<span class="pl-c1">}}</span> // hi-diddly-ho there, n...</pre></div>
-
-<h3>
-<a id="user-content-unescape" class="anchor" href="#unescape" aria-hidden="true"><span class="octicon octicon-link"></span></a>unescape</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">unescape</span> <span class="pl-s"><span class="pl-pds">'</span>fred, barney, &amp;amp; pebbles<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // fred, barney, <span class="pl-ii">&amp;</span> pebbles</pre></div>
-
-<h3>
-<a id="user-content-urlify" class="anchor" href="#urlify" aria-hidden="true"><span class="octicon octicon-link"></span></a>urlify</h3>
-
-<div class="highlight highlight-handlebars"><pre><span class="pl-c1">{{</span><span class="pl-v">urlify</span> <span class="pl-s"><span class="pl-pds">'</span>Hey Hey<span class="pl-pds">'</span></span><span class="pl-c1">}}</span> // hey-hey</pre></div>
 </article>
   </div>
 
