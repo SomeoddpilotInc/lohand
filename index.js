@@ -31,6 +31,7 @@ const customHelpersWhitelist = [
   'endsWith',
   'eq',
   'iter',
+  'markdown',
   'possessive',
   'startsWith',
   'urlify'
