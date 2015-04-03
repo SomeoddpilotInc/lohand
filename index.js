@@ -53,7 +53,7 @@ const helpers = _.extend(
 module.exports = {
   helpers: helpers,
   registerAll: function (handlebars) {
-    helpers.forEach(function (helper, helperName) {
+    _.each(helpers, function (helper, helperName) {
       handlebars.registerHelper(helperName, helper);
     });
   }

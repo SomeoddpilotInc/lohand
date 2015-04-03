@@ -17,7 +17,7 @@ npm install lohand
 ```bash
 var handlebars = require('handlebars');
 require('lohand')
-  .register(handlebars);
+  .registerAll(handlebars);
 ```
 
 ### Individual Helpers
