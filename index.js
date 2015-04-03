@@ -32,6 +32,7 @@ const customHelpersWhitelist = [
   'eq',
   'every',
   'iter',
+  'markdown',
   'possessive',
   'startsWith'
 ];
