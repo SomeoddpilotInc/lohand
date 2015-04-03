@@ -30,6 +30,7 @@ const customHelpersWhitelist = [
   'encodeURIComponent',
   'endsWith',
   'eq',
+  'every',
   'iter',
   'possessive',
   'startsWith',
