@@ -190,9 +190,3 @@ npm test
 ```handlebars
 {{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
 ```
-
-### urlify
-
-```handlebars
-{{urlify 'Hey Hey'}} // hey-hey
-```

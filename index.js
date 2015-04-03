@@ -32,8 +32,7 @@ const customHelpersWhitelist = [
   'eq',
   'iter',
   'possessive',
-  'startsWith',
-  'urlify'
+  'startsWith'
 ];
 
 const customHelpers = _(customHelpersWhitelist)
@@ -43,9 +42,7 @@ const customHelpers = _(customHelpersWhitelist)
   .value();
 
 const helpers = _.extend(
-  {
-    'title-case': stringHelpers.startCase
-  },
+  {},
   stringHelpers,
   customHelpers
 );
