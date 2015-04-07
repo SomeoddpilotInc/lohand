@@ -37,6 +37,27 @@ npm test
 
 ## Helpers
 
+### Iterators
+
+#### every
+
+```handlebars
+{{#every 3 [1, 2, 3]}}
+  <!-- index % 3 === 0 -->
+{{else}}
+  <!-- otherwise -->
+{{/every}}
+```
+
+#### iter
+
+```handlebars
+{{#iter items}}
+    {{i}} // index
+    {{iPlus1}} // index + 1
+{{/iter}}
+```
+
 ### Comparisons
 
 #### endsWith
@@ -117,15 +138,6 @@ npm test
 ```handlebars
 {{encodeURIComponent 'Foo Bar'}}
 → Foo%20Bar
-```
-
-#### iter
-
-```handlebars
-{{#iter items}}
-    {{i}} // index
-    {{iPlus1}} // index + 1
-{{/iter}}
 ```
 
 #### kebabCase
