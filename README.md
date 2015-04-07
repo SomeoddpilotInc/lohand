@@ -288,3 +288,10 @@ A naive version of “Title Case” which simply upper cases the first letter of
 <div>foo</div>
 <div>bar</div>
 ```
+
+### union
+
+```handlebars
+{{union [1, 2, 3] [4, 5]}}
+// → [1, 2, 3, 4, 5]
+```

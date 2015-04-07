@@ -8,6 +8,20 @@ describe('slice', function () {
 
     const collection = [1, 2, 3, 4, 5];
 
+    var result = handlebars.compile('{{slice collection 0 2}}')({
+      collection: collection
+    });
+
+    assert.equal(result, '1,2');
+
+    assert.deepEqual(slice(collection, 0, 2), [1, 2]);
+  });
+
+  it('should slice arrays', function () {
+    handlebars.registerHelper('slice', slice);
+
+    const collection = [1, 2, 3, 4, 5];
+
     var result = handlebars.compile('{{slice collection 1 3}}')({
       collection: collection
     });
