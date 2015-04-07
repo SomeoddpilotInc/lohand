@@ -61,16 +61,17 @@ npm test
 ### encodeURIComponent
 
 ```handlebars
-{{encodeURIComponent 'Foo Bar'}} // Foo%20Bar
+{{encodeURIComponent 'Foo Bar'}}
+→ Foo%20Bar
 ```
 
 ### endsWith
 
 ```handlebars
 {{#endsWith 'abc' 'c'}}
-  // string starts with 'c'
+  <!-- string starts with 'c' -->
 {{else}}
-  // string does not start with 'c'
+  <!-- string does not start with 'c' -->
 {{/endsWith}}
 ```
 
@@ -78,9 +79,9 @@ npm test
 
 ```handlebars
 {{#eq val1 val2}}
-  // ===
+  <!-- === -->
 {{else}}
-  // !==
+  <!-- !== -->
 {{/eq}}
 ```
 
@@ -88,9 +89,9 @@ npm test
 
 ```handlebars
 {{#greaterThan left right}}
-  // left > right
+  <!-- left > right -->
 {{else}}
-  // left <= right
+  <!-- left <= right -->
 {{/greaterThan}}
 ```
 
