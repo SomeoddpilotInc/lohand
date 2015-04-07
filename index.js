@@ -32,6 +32,7 @@ const arrayHelperWhitelist = [
   'drop',
   'dropRight',
   'first',
+  'flatten',
   'last'
 ];
 
