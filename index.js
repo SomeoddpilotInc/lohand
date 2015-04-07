@@ -34,7 +34,8 @@ const arrayHelperWhitelist = [
   'first',
   'flatten',
   'last',
-  'slice'
+  'slice',
+  'union'
 ];
 
 const arrayHelpers = _(arrayHelperWhitelist)
