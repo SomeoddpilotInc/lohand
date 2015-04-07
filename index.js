@@ -27,7 +27,8 @@ const stringHelpers = _(stringHelperWhitelist)
   .value();
 
 const arrayHelperWhitelist = [
-  'chunk'
+  'chunk',
+  'compact'
 ];
 
 const arrayHelpers = _(arrayHelperWhitelist)
