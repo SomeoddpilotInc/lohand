@@ -40,19 +40,22 @@ npm test
 ### camelCase
 
 ```handlebars
-{{camelCase 'Foo Bar'}} // Foo Bar
+{{camelCase 'Foo Bar'}}
+→ fooBar
 ```
 
 ### capitalize
 
 ```handlebars
-{{capitalize 'foo bar'}} // Foo bar
+{{capitalize 'foo bar'}}
+→ Foo Bar
 ```
 
 ### deburr
 
 ```handlebars
-{{deburr 'déjà vu'}} // deja vu
+{{deburr 'déjà vu'}}
+→ deja vu
 ```
 
 ### encodeURIComponent
