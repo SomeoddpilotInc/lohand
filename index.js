@@ -26,6 +26,16 @@ const stringHelpers = _(stringHelperWhitelist)
   })
   .value();
 
+const arrayHelperWhitelist = [
+  'chunk'
+];
+
+const arrayHelpers = _(arrayHelperWhitelist)
+  .transform(function (result, helperName) {
+    result[helperName] = _[helperName];
+  })
+  .value();
+
 const customHelpersWhitelist = [
   'encodeURIComponent',
   'endsWith',
@@ -51,7 +61,8 @@ const helpers = _.extend(
     indefiniteArticle: require('indefinite-article')
   },
   stringHelpers,
-  customHelpers
+  customHelpers,
+  arrayHelpers
 );
 
 module.exports = {
