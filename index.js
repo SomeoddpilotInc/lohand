@@ -28,7 +28,9 @@ const stringHelpers = _(stringHelperWhitelist)
 
 const arrayHelperWhitelist = [
   'chunk',
-  'compact'
+  'compact',
+  'drop',
+  'dropRight'
 ];
 
 const arrayHelpers = _(arrayHelperWhitelist)
