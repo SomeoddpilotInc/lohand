@@ -30,7 +30,9 @@ const arrayHelperWhitelist = [
   'chunk',
   'compact',
   'drop',
-  'dropRight'
+  'dropRight',
+  'first',
+  'last'
 ];
 
 const arrayHelpers = _(arrayHelperWhitelist)
