@@ -7,7 +7,8 @@ describe('startsWith', function () {
     var fnSpy = new Spy();
 
     assert.equal(startsWith('abc', 'a', {
-      fn: fnSpy
+      fn: fnSpy,
+      hash: {}
     }));
 
     assert.equal(fnSpy.calledOnce, true);
@@ -17,7 +18,8 @@ describe('startsWith', function () {
     var inverseSpy = new Spy();
 
     assert.equal(startsWith('abc', 'b', {
-      inverse: inverseSpy
+      inverse: inverseSpy,
+      hash: {}
     }));
 
     assert.equal(inverseSpy.calledOnce, true);
