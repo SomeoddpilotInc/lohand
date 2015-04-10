@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+
+fs.writeFileSync('index.md', fs.readFileSync('readme.md', 'utf-8')
+  .replace(/```(\w+)/g, function (text, type) {
+    return '{% highlight ' + type + ' %}{% raw %}';
+  })
+  .replace(/```/g, '{% endraw %}{% endhighlight %}')
+  .replace(/^/, '---\nlayout: index\n---\n')
+);
