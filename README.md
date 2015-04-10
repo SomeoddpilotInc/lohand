@@ -37,61 +37,19 @@ npm test
 
 ## Helpers
 
-### camelCase
+### Iterators
+
+#### every
 
 ```handlebars
-{{camelCase 'Foo Bar'}} // Foo Bar
-```
-
-### capitalize
-
-```handlebars
-{{capitalize 'foo bar'}} // Foo bar
-```
-
-### deburr
-
-```handlebars
-{{deburr 'déjà vu'}} // deja vu
-```
-
-### encodeURIComponent
-
-```handlebars
-{{encodeURIComponent 'Foo Bar'}} // Foo%20Bar
-```
-
-### endsWith
-
-```handlebars
-{{#endsWith 'abc' 'c'}}
-  // string starts with 'c'
+{{#every 3 [1, 2, 3]}}
+  <!-- index % 3 === 0 -->
 {{else}}
-  // string does not start with 'c'
-{{/endsWith}}
+  <!-- otherwise -->
+{{/every}}
 ```
 
-### eq
-
-```handlebars
-{{#eq val1 val2}}
-  // ===
-{{else}}
-  // !==
-{{/eq}}
-```
-
-### greaterThan
-
-```handlebars
-{{#greaterThan left right}}
-  // left > right
-{{else}}
-  // left <= right
-{{/greaterThan}}
-```
-
-### iter
+#### iter
 
 ```handlebars
 {{#iter items}}
@@ -100,13 +58,39 @@ npm test
 {{/iter}}
 ```
 
-### kebabCase
+### Comparisons
+
+#### endsWith
 
 ```handlebars
-{{kebabCase 'Foo Bar'}} // 'foo-bar'
+{{#endsWith 'abc' 'c'}}
+  <!-- string starts with 'c' -->
+{{else}}
+  <!-- string does not start with 'c' -->
+{{/endsWith}}
 ```
 
-### lessThan
+#### eq
+
+```handlebars
+{{#eq val1 val2}}
+  <!-- === -->
+{{else}}
+  <!-- !== -->
+{{/eq}}
+```
+
+#### greaterThan
+
+```handlebars
+{{#greaterThan left right}}
+  <!-- left > right -->
+{{else}}
+  <!-- left <= right -->
+{{/greaterThan}}
+```
+
+#### lessThan
 
 ```handlebars
 {{#lessThan left right}}
@@ -116,59 +100,7 @@ npm test
 {{/lessThan}}
 ```
 
-### pad
-
-```handlebars
-{{pad 'abc' 8}} // '  abc   '
-{{pad 'abc' 8 '_-'}} // _-abc_-_
-```
-
-### padLeft
-
-```handlebars
-{{padLeft 'abc' 6}} // '   abc'
-{{padLeft 'abc' 6 '_-'}} // _-_abc
-```
-
-### padRight
-
-```handlebars
-{{padRight 'abc' 6}} // 'abc   '
-{{padRight 'abc' 6 '_-'}} // abc_-_
-```
-
-### parseInt
-
-```handlebars
-{{parseInt '08'}} // 8
-```
-
-### possessive
-
-```handlebars
-{{possessive 'Susan'}} // Susan’s
-{{possessive 'Chris'}} // Chris’
-```
-
-### repeat
-
-```handlebars
-{{repeat '*' 3}} // ***
-```
-
-### snakeCase
-
-```handlebars
-{{snakeCase 'Foo Bar'}} // foo_bar
-```
-
-### startCase
-
-```handlebars
-{{startCase '--foo-bar'}} // Foo Bar
-```
-
-### startsWith
+#### startsWith
 
 ```handlebars
 {{#startsWith 'abc' 'a'}}
@@ -178,35 +110,123 @@ npm test
 {{/startsWith}}
 ```
 
-### trim
+### Strings
+
+#### camelCase
+
+```handlebars
+{{camelCase 'Foo Bar'}}
+→ fooBar
+```
+
+#### capitalize
+
+```handlebars
+{{capitalize 'foo bar'}}
+→ Foo Bar
+```
+
+#### deburr
+
+```handlebars
+{{deburr 'déjà vu'}}
+→ deja vu
+```
+
+#### encodeURIComponent
+
+```handlebars
+{{encodeURIComponent 'Foo Bar'}}
+→ Foo%20Bar
+```
+
+#### kebabCase
+
+```handlebars
+{{kebabCase 'Foo Bar'}} // 'foo-bar'
+```
+
+#### pad
+
+```handlebars
+{{pad 'abc' 8}} // '  abc   '
+{{pad 'abc' 8 '_-'}} // _-abc_-_
+```
+
+#### padLeft
+
+```handlebars
+{{padLeft 'abc' 6}} // '   abc'
+{{padLeft 'abc' 6 '_-'}} // _-_abc
+```
+
+#### padRight
+
+```handlebars
+{{padRight 'abc' 6}} // 'abc   '
+{{padRight 'abc' 6 '_-'}} // abc_-_
+```
+
+#### parseInt
+
+```handlebars
+{{parseInt '08'}} // 8
+```
+
+#### possessive
+
+```handlebars
+{{possessive 'Susan'}} // Susan’s
+{{possessive 'Chris'}} // Chris’
+```
+
+#### repeat
+
+```handlebars
+{{repeat '*' 3}} // ***
+```
+
+#### snakeCase
+
+```handlebars
+{{snakeCase 'Foo Bar'}} // foo_bar
+```
+
+#### startCase
+
+```handlebars
+{{startCase '--foo-bar'}} // Foo Bar
+```
+
+#### trim
 
 ```handlebars
 {{trim '  abc  '}} // abc
 {{trim '-_-abc-_-' '_-'}} // abc
 ```
 
-### trimLeft
+#### trimLeft
 
 ```handlebars
 {{trimLeft '  abc  '}} // 'abc  '
 {{trimLeft '-_-abc-_-' '_-'}} // abc-_-
 ```
 
-### trimRight
+#### trimRight
 
 ```handlebars
 {{trimRight '  abc  '}} // '  abc'
 {{trimRight '-_-abc-_-' '_-'}} // -_-abc
 ```
 
-### trunc
+#### trunc
 
 ```handlebars
 {{trunc 'hi-diddly-ho there, neighborino'}} // hi-diddly-ho there, neighbo...
 {{trunc 'hi-diddly-ho there, neighborino' 24}} // hi-diddly-ho there, n...
 ```
 
-### unescape
+#### unescape
 
 ```handlebars
 {{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
