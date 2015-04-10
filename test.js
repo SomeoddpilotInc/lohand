@@ -1,5 +1,4 @@
 require("blanket")({
-  "pattern": "/lohand/lib/"
+  pattern: "/lohand/lib/"
 });
-
 require('require-dir')('tests');

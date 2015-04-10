@@ -9,7 +9,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha -C"
+    "test": "multi='dot=- html-cov=coverage.html' ./node_modules/mocha/bin/mocha -r blanket --reporter mocha-multi --no-colors"
   },
   "repository": {
     "type": "git",
@@ -51,14 +51,14 @@
   "devDependencies": {
     "blanket": "^1.1.6",
     "mocha": "^2.2.1",
+    "mocha-multi": "^0.6.0",
     "require-dir": "^0.3.0",
-    "sinon": "^1.14.1"
+    "sinon": "^1.14.1",
+    "travis-cov": "^0.2.5"
   },
   "config": {
-    "blanket": {
-      "pattern": [
-        "/lib/"
-      ]
+    "travis-cov": {
+      "threshold": 90
     }
   }
 }
