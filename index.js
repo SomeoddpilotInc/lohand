@@ -31,6 +31,7 @@ const customHelpersWhitelist = [
   'endsWith',
   'eq',
   'every',
+  'indefiniteArticle',
   'iter',
   'markdown',
   'lessThan',
