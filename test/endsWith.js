@@ -7,7 +7,8 @@ describe('endsWith', function () {
     var fnSpy = new Spy();
 
     assert.equal(endsWith('abc', 'c', {
-      fn: fnSpy
+      fn: fnSpy,
+      hash: {}
     }));
 
     assert.equal(fnSpy.calledOnce, true);
@@ -17,7 +18,8 @@ describe('endsWith', function () {
     var inverseSpy = new Spy();
 
     assert.equal(endsWith('abc', 'a', {
-      inverse: inverseSpy
+      inverse: inverseSpy,
+      hash: {}
     }));
 
     assert.equal(inverseSpy.calledOnce, true);
