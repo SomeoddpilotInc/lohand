@@ -31,7 +31,6 @@ const customHelpersWhitelist = [
   'endsWith',
   'eq',
   'every',
-  'indefiniteArticle',
   'iter',
   'markdown',
   'lessThan',
@@ -47,7 +46,9 @@ const customHelpers = _(customHelpersWhitelist)
   .value();
 
 const helpers = _.extend(
-  {},
+  {
+    indefiniteArticle: require('indefinite-article')
+  },
   stringHelpers,
   customHelpers
 );
