@@ -1,5 +1,6 @@
 # Lohand
 
+[![npm version](https://badge.fury.io/js/lohand.svg)](http://badge.fury.io/js/lohand)
 [![Build Status](https://travis-ci.org/alexsomeoddpilot/lohand.svg?branch=master)](https://travis-ci.org/alexsomeoddpilot/lohand)
 [![Dependency Status](https://david-dm.org/alexsomeoddpilot/lohand.svg)](https://david-dm.org/alexsomeoddpilot/lohand)
 [![devDependency Status](https://david-dm.org/alexsomeoddpilot/lohand/dev-status.svg)](https://david-dm.org/alexsomeoddpilot/lohand#info=devDependencies)
@@ -17,7 +18,7 @@ npm install lohand
 ```bash
 var handlebars = require('handlebars');
 require('lohand')
-  .register(handlebars);
+  .registerAll(handlebars);
 ```
 
 ### Individual Helpers
@@ -80,6 +81,16 @@ npm test
 {{/eq}}
 ```
 
+### greaterThan
+
+```handlebars
+{{#greaterThan left right}}
+  // left > right
+{{else}}
+  // left <= right
+{{/greaterThan}}
+```
+
 ### iter
 
 ```handlebars
@@ -93,6 +104,16 @@ npm test
 
 ```handlebars
 {{kebabCase 'Foo Bar'}} // 'foo-bar'
+```
+
+### lessThan
+
+```handlebars
+{{#lessThan left right}}
+  // left < right
+{{else}}
+  // left >= right
+{{/lessThan}}
 ```
 
 ### pad
@@ -189,10 +210,4 @@ npm test
 
 ```handlebars
 {{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
-```
-
-### urlify
-
-```handlebars
-{{urlify 'Hey Hey'}} // hey-hey
 ```

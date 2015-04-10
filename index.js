@@ -30,10 +30,13 @@ const customHelpersWhitelist = [
   'encodeURIComponent',
   'endsWith',
   'eq',
+  'every',
   'iter',
+  'markdown',
+  'lessThan',
+  'greaterThan',
   'possessive',
-  'startsWith',
-  'urlify'
+  'startsWith'
 ];
 
 const customHelpers = _(customHelpersWhitelist)
@@ -43,9 +46,7 @@ const customHelpers = _(customHelpersWhitelist)
   .value();
 
 const helpers = _.extend(
-  {
-    'title-case': stringHelpers.startCase
-  },
+  {},
   stringHelpers,
   customHelpers
 );
@@ -53,7 +54,7 @@ const helpers = _.extend(
 module.exports = {
   helpers: helpers,
   registerAll: function (handlebars) {
-    helpers.forEach(function (helper, helperName) {
+    _.each(helpers, function (helper, helperName) {
       handlebars.registerHelper(helperName, helper);
     });
   }
