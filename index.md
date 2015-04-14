@@ -151,6 +151,8 @@ npm test
 
 #### markdown
 
+Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text into Markdown.
+
 {% highlight handlebars %}{% raw %}
 {{{markdown '# Foo'}}}
 → <h1>Foo</h1>
