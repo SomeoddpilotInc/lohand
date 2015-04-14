@@ -114,6 +114,8 @@ npm test
 
 #### camelCase
 
+Utilizes Lodash’s [camelCase](https://lodash.com/docs#camelCase).
+
 ```handlebars
 {{camelCase 'Foo Bar'}}
 → fooBar
