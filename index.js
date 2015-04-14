@@ -46,7 +46,9 @@ const customHelpers = _(customHelpersWhitelist)
   .value();
 
 const helpers = _.extend(
-  {},
+  {
+    indefiniteArticle: require('indefinite-article')
+  },
   stringHelpers,
   customHelpers
 );

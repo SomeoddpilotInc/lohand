@@ -146,6 +146,32 @@ npm test
 {{kebabCase 'Foo Bar'}} // 'foo-bar'
 ```
 
+#### markdown
+
+```handlebars
+{{{markdown '# Foo'}}}
+→ <h1>Foo</h1>
+```
+
+#### encodeURIComponent
+
+```handlebars
+{{encodeURIComponent 'Foo Bar'}}
+→ Foo%20Bar
+```
+
+#### kebabCase
+
+```handlebars
+{{kebabCase 'Foo Bar'}} // 'foo-bar'
+```
+
+#### markdown
+
+```handlebars
+{{{markdown '# Foo'}}}
+```
+
 #### pad
 
 ```handlebars
@@ -230,4 +256,15 @@ npm test
 
 ```handlebars
 {{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
+```
+
+#### words
+
+```handlebars
+{{#each (words 'foo bar')}}
+  <div>{{this}}</div>
+{{/each}}
+
+<div>foo</div>
+<div>bar</div>
 ```

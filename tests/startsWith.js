@@ -1,13 +1,14 @@
-const endsWith = require('../index').helpers.endsWith;
+const startsWith = require('../index').helpers.startsWith;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 
-describe('endsWith', function () {
+describe('startsWith', function () {
   it('should call fn when true', function () {
     var fnSpy = new Spy();
 
-    assert.equal(endsWith('abc', 'c', {
-      fn: fnSpy
+    assert.equal(startsWith('abc', 'a', {
+      fn: fnSpy,
+      hash: {}
     }));
 
     assert.equal(fnSpy.calledOnce, true);
@@ -16,8 +17,9 @@ describe('endsWith', function () {
   it('should call inverse when false', function () {
     var inverseSpy = new Spy();
 
-    assert.equal(endsWith('abc', 'a', {
-      inverse: inverseSpy
+    assert.equal(startsWith('abc', 'b', {
+      inverse: inverseSpy,
+      hash: {}
     }));
 
     assert.equal(inverseSpy.calledOnce, true);
