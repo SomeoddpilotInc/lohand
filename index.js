@@ -26,6 +26,38 @@ const stringHelpers = _(stringHelperWhitelist)
   })
   .value();
 
+const arrayHelperWhitelist = [
+  'chunk',
+  'compact',
+  'drop',
+  'dropRight',
+  'first',
+  'flatten',
+  'last',
+  'slice',
+  'union'
+];
+
+const arrayHelpers = _(arrayHelperWhitelist)
+  .transform(function (result, helperName) {
+    result[helperName] = _[helperName];
+  })
+  .value();
+
+const collectionHelperWhitelist = [
+  'at',
+  'pluck',
+  'sample',
+  'shuffle',
+  'size'
+];
+
+const collectionHelpers = _(collectionHelperWhitelist)
+  .transform(function (result, helperName) {
+    result[helperName] = _[helperName];
+  })
+  .value();
+
 const customHelpersWhitelist = [
   'encodeURIComponent',
   'endsWith',
@@ -33,6 +65,7 @@ const customHelpersWhitelist = [
   'every',
   'iter',
   'markdown',
+  'numeral',
   'lessThan',
   'greaterThan',
   'possessive',
@@ -50,7 +83,9 @@ const helpers = _.extend(
     indefiniteArticle: require('indefinite-article')
   },
   stringHelpers,
-  customHelpers
+  customHelpers,
+  collectionHelpers,
+  arrayHelpers
 );
 
 module.exports = {

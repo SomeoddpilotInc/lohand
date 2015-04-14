@@ -1,6 +1,6 @@
 {
   "name": "lohand",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A library for wrapping Lodash functions into Handlebars",
   "readme": "`npm install lohand -S`",
   "main": "index.js",
@@ -47,10 +47,13 @@
   "dependencies": {
     "indefinite-article": "0.0.2",
     "lodash": "^3.6.0",
+    "numeral": "^1.5.3",
     "showdown": "^0.4.0"
   },
   "devDependencies": {
     "blanket": "^1.1.6",
+    "chai": "^2.2.0",
+    "handlebars": "^3.0.1",
     "mocha": "^2.2.1",
     "mocha-multi": "^0.6.0",
     "require-dir": "^0.3.0",

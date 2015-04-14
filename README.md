@@ -58,6 +58,47 @@ npm test
 {{/iter}}
 ```
 
+### Collection
+
+#### at
+
+```handlebars
+{{at [1, 2, 3] 1}}
+→ 2
+```
+
+#### pluck
+
+```handlebars
+{{at {foo: 'bar'} 'foo'}}
+→ bar
+```
+
+#### sample
+
+```handlebars
+{{#each (sample [1, 2, 3], 2)}}
+  {{this}};
+{{/each}}
+1;3;
+```
+
+#### shuffle
+
+```handlebars
+{{#each (shuffle [1, 2, 3])}}
+  {{this}};
+{{/each}}
+3;1;2;
+```
+
+#### size
+
+```handlebars
+{{size [1, 2, 3]}}
+→ 3
+```
+
 ### Comparisons
 
 #### endsWith
@@ -94,9 +135,9 @@ npm test
 
 ```handlebars
 {{#lessThan left right}}
-  // left < right
+  <!-- left < right -->
 {{else}}
-  // left >= right
+  <!-- left >= right -->
 {{/lessThan}}
 ```
 
@@ -113,6 +154,8 @@ npm test
 ### Strings
 
 #### camelCase
+
+Utilizes Lodash’s [camelCase](https://lodash.com/docs#camelCase).
 
 ```handlebars
 {{camelCase 'Foo Bar'}}
@@ -222,42 +265,58 @@ Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text in
 
 #### startCase
 
+A naive version of “Title Case” which simply upper cases the first letter of each word.
+
 ```handlebars
-{{startCase '--foo-bar'}} // Foo Bar
+{{startCase '--foo-bar'}}
+<!-- Foo Bar -->
 ```
 
 #### trim
 
 ```handlebars
-{{trim '  abc  '}} // abc
-{{trim '-_-abc-_-' '_-'}} // abc
+{{trim '  abc  '}}
+<!-- abc -->
+
+{{trim '-_-abc-_-' '_-'}}
+<!-- abc -->
 ```
 
 #### trimLeft
 
 ```handlebars
-{{trimLeft '  abc  '}} // 'abc  '
-{{trimLeft '-_-abc-_-' '_-'}} // abc-_-
+{{trimLeft '  abc  '}}
+<!-- 'abc  ' -->
+
+{{trimLeft '-_-abc-_-' '_-'}}
+<!-- abc-_- -->
 ```
 
 #### trimRight
 
 ```handlebars
-{{trimRight '  abc  '}} // '  abc'
-{{trimRight '-_-abc-_-' '_-'}} // -_-abc
+{{trimRight '  abc  '}}
+<!-- '  abc' -->
+
+{{trimRight '-_-abc-_-' '_-'}}
+<!-- -_-abc -->
 ```
 
 #### trunc
 
 ```handlebars
-{{trunc 'hi-diddly-ho there, neighborino'}} // hi-diddly-ho there, neighbo...
-{{trunc 'hi-diddly-ho there, neighborino' 24}} // hi-diddly-ho there, n...
+{{trunc 'hi-diddly-ho there, neighborino'}}
+<!-- hi-diddly-ho there, neighbo... -->
+
+{{trunc 'hi-diddly-ho there, neighborino' 24}}
+<!-- hi-diddly-ho there, n... -->
 ```
 
 #### unescape
 
 ```handlebars
-{{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
+{{unescape 'fred, barney, &amp; pebbles'}}
+<!-- fred, barney, & pebbles -->
 ```
 
 #### words
@@ -269,4 +328,11 @@ Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text in
 
 <div>foo</div>
 <div>bar</div>
+```
+
+### union
+
+```handlebars
+{{union [1, 2, 3] [4, 5]}}
+// → [1, 2, 3, 4, 5]
 ```
