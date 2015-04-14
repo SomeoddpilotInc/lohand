@@ -149,6 +149,32 @@ npm test
 {{kebabCase 'Foo Bar'}} // 'foo-bar'
 {% endraw %}{% endhighlight %}
 
+#### markdown
+
+{% highlight handlebars %}{% raw %}
+{{{markdown '# Foo'}}}
+→ <h1>Foo</h1>
+{% endraw %}{% endhighlight %}
+
+#### encodeURIComponent
+
+{% highlight handlebars %}{% raw %}
+{{encodeURIComponent 'Foo Bar'}}
+→ Foo%20Bar
+{% endraw %}{% endhighlight %}
+
+#### kebabCase
+
+{% highlight handlebars %}{% raw %}
+{{kebabCase 'Foo Bar'}} // 'foo-bar'
+{% endraw %}{% endhighlight %}
+
+#### markdown
+
+{% highlight handlebars %}{% raw %}
+{{{markdown '# Foo'}}}
+{% endraw %}{% endhighlight %}
+
 #### pad
 
 {% highlight handlebars %}{% raw %}
@@ -233,4 +259,15 @@ npm test
 
 {% highlight handlebars %}{% raw %}
 {{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
+{% endraw %}{% endhighlight %}
+
+#### words
+
+{% highlight handlebars %}{% raw %}
+{{#each (words 'foo bar')}}
+  <div>{{this}}</div>
+{{/each}}
+
+<div>foo</div>
+<div>bar</div>
 {% endraw %}{% endhighlight %}
