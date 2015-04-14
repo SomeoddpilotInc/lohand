@@ -94,9 +94,9 @@ npm test
 
 ```handlebars
 {{#lessThan left right}}
-  // left < right
+  <!-- left < right -->
 {{else}}
-  // left >= right
+  <!-- left >= right -->
 {{/lessThan}}
 ```
 
