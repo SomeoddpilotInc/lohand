@@ -229,29 +229,41 @@ Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text in
 #### trim
 
 ```handlebars
-{{trim '  abc  '}} // abc
-{{trim '-_-abc-_-' '_-'}} // abc
+{{trim '  abc  '}}
+<!-- abc -->
+
+{{trim '-_-abc-_-' '_-'}}
+<!-- abc -->
 ```
 
 #### trimLeft
 
 ```handlebars
-{{trimLeft '  abc  '}} // 'abc  '
-{{trimLeft '-_-abc-_-' '_-'}} // abc-_-
+{{trimLeft '  abc  '}}
+<!-- 'abc  ' -->
+
+{{trimLeft '-_-abc-_-' '_-'}}
+<!-- abc-_- -->
 ```
 
 #### trimRight
 
 ```handlebars
-{{trimRight '  abc  '}} // '  abc'
-{{trimRight '-_-abc-_-' '_-'}} // -_-abc
+{{trimRight '  abc  '}}
+<!-- '  abc' -->
+
+{{trimRight '-_-abc-_-' '_-'}}
+<!-- -_-abc -->
 ```
 
 #### trunc
 
 ```handlebars
-{{trunc 'hi-diddly-ho there, neighborino'}} // hi-diddly-ho there, neighbo...
-{{trunc 'hi-diddly-ho there, neighborino' 24}} // hi-diddly-ho there, n...
+{{trunc 'hi-diddly-ho there, neighborino'}}
+<!-- hi-diddly-ho there, neighbo... -->
+
+{{trunc 'hi-diddly-ho there, neighborino' 24}}
+<!-- hi-diddly-ho there, n... -->
 ```
 
 #### unescape
