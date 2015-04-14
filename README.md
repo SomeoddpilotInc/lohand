@@ -257,3 +257,14 @@ npm test
 ```handlebars
 {{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
 ```
+
+#### words
+
+```handlebars
+{{#each (words 'foo bar')}}
+  <div>{{this}}</div>
+{{/each}}
+
+<div>foo</div>
+<div>bar</div>
+```
