@@ -58,6 +58,47 @@ npm test
 {{/iter}}
 ```
 
+### Collection
+
+#### at
+
+```handlebars
+{{at [1, 2, 3] 1}}
+→ 2
+```
+
+#### pluck
+
+```handlebars
+{{at {foo: 'bar'} 'foo'}}
+→ bar
+```
+
+#### sample
+
+```handlebars
+{{#each (sample [1, 2, 3], 2)}}
+  {{this}};
+{{/each}}
+1;3;
+```
+
+#### shuffle
+
+```handlebars
+{{#each (shuffle [1, 2, 3])}}
+  {{this}};
+{{/each}}
+3;1;2;
+```
+
+#### size
+
+```handlebars
+{{size [1, 2, 3]}}
+→ 3
+```
+
 ### Comparisons
 
 #### endsWith
