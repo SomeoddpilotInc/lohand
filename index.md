@@ -61,6 +61,47 @@ npm test
 {{/iter}}
 {% endraw %}{% endhighlight %}
 
+### Collection
+
+#### at
+
+{% highlight handlebars %}{% raw %}
+{{at [1, 2, 3] 1}}
+→ 2
+{% endraw %}{% endhighlight %}
+
+#### pluck
+
+{% highlight handlebars %}{% raw %}
+{{at {foo: 'bar'} 'foo'}}
+→ bar
+{% endraw %}{% endhighlight %}
+
+#### sample
+
+{% highlight handlebars %}{% raw %}
+{{#each (sample [1, 2, 3], 2)}}
+  {{this}};
+{{/each}}
+1;3;
+{% endraw %}{% endhighlight %}
+
+#### shuffle
+
+{% highlight handlebars %}{% raw %}
+{{#each (shuffle [1, 2, 3])}}
+  {{this}};
+{{/each}}
+3;1;2;
+{% endraw %}{% endhighlight %}
+
+#### size
+
+{% highlight handlebars %}{% raw %}
+{{size [1, 2, 3]}}
+→ 3
+{% endraw %}{% endhighlight %}
+
 ### Comparisons
 
 #### endsWith
@@ -97,9 +138,9 @@ npm test
 
 {% highlight handlebars %}{% raw %}
 {{#lessThan left right}}
-  // left < right
+  <!-- left < right -->
 {{else}}
-  // left >= right
+  <!-- left >= right -->
 {{/lessThan}}
 {% endraw %}{% endhighlight %}
 
@@ -116,6 +157,8 @@ npm test
 ### Strings
 
 #### camelCase
+
+Utilizes Lodash’s [camelCase](https://lodash.com/docs#camelCase).
 
 {% highlight handlebars %}{% raw %}
 {{camelCase 'Foo Bar'}}
@@ -225,42 +268,58 @@ Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text in
 
 #### startCase
 
+A naive version of “Title Case” which simply upper cases the first letter of each word.
+
 {% highlight handlebars %}{% raw %}
-{{startCase '--foo-bar'}} // Foo Bar
+{{startCase '--foo-bar'}}
+<!-- Foo Bar -->
 {% endraw %}{% endhighlight %}
 
 #### trim
 
 {% highlight handlebars %}{% raw %}
-{{trim '  abc  '}} // abc
-{{trim '-_-abc-_-' '_-'}} // abc
+{{trim '  abc  '}}
+<!-- abc -->
+
+{{trim '-_-abc-_-' '_-'}}
+<!-- abc -->
 {% endraw %}{% endhighlight %}
 
 #### trimLeft
 
 {% highlight handlebars %}{% raw %}
-{{trimLeft '  abc  '}} // 'abc  '
-{{trimLeft '-_-abc-_-' '_-'}} // abc-_-
+{{trimLeft '  abc  '}}
+<!-- 'abc  ' -->
+
+{{trimLeft '-_-abc-_-' '_-'}}
+<!-- abc-_- -->
 {% endraw %}{% endhighlight %}
 
 #### trimRight
 
 {% highlight handlebars %}{% raw %}
-{{trimRight '  abc  '}} // '  abc'
-{{trimRight '-_-abc-_-' '_-'}} // -_-abc
+{{trimRight '  abc  '}}
+<!-- '  abc' -->
+
+{{trimRight '-_-abc-_-' '_-'}}
+<!-- -_-abc -->
 {% endraw %}{% endhighlight %}
 
 #### trunc
 
 {% highlight handlebars %}{% raw %}
-{{trunc 'hi-diddly-ho there, neighborino'}} // hi-diddly-ho there, neighbo...
-{{trunc 'hi-diddly-ho there, neighborino' 24}} // hi-diddly-ho there, n...
+{{trunc 'hi-diddly-ho there, neighborino'}}
+<!-- hi-diddly-ho there, neighbo... -->
+
+{{trunc 'hi-diddly-ho there, neighborino' 24}}
+<!-- hi-diddly-ho there, n... -->
 {% endraw %}{% endhighlight %}
 
 #### unescape
 
 {% highlight handlebars %}{% raw %}
-{{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
+{{unescape 'fred, barney, &amp; pebbles'}}
+<!-- fred, barney, & pebbles -->
 {% endraw %}{% endhighlight %}
 
 #### words
@@ -272,4 +331,11 @@ Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text in
 
 <div>foo</div>
 <div>bar</div>
+{% endraw %}{% endhighlight %}
+
+### union
+
+{% highlight handlebars %}{% raw %}
+{{union [1, 2, 3] [4, 5]}}
+// → [1, 2, 3, 4, 5]
 {% endraw %}{% endhighlight %}
