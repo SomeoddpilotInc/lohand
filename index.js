@@ -44,6 +44,20 @@ const arrayHelpers = _(arrayHelperWhitelist)
   })
   .value();
 
+const collectionHelperWhitelist = [
+  'at',
+  'pluck',
+  'sample',
+  'shuffle',
+  'size'
+];
+
+const collectionHelpers = _(collectionHelperWhitelist)
+  .transform(function (result, helperName) {
+    result[helperName] = _[helperName];
+  })
+  .value();
+
 const customHelpersWhitelist = [
   'encodeURIComponent',
   'endsWith',
@@ -70,6 +84,7 @@ const helpers = _.extend(
   },
   stringHelpers,
   customHelpers,
+  collectionHelpers,
   arrayHelpers
 );
 
