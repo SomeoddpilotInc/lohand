@@ -146,6 +146,32 @@ npm test
 {{kebabCase 'Foo Bar'}} // 'foo-bar'
 ```
 
+#### markdown
+
+```handlebars
+{{{markdown '# Foo'}}}
+→ <h1>Foo</h1>
+```
+
+#### encodeURIComponent
+
+```handlebars
+{{encodeURIComponent 'Foo Bar'}}
+→ Foo%20Bar
+```
+
+#### kebabCase
+
+```handlebars
+{{kebabCase 'Foo Bar'}} // 'foo-bar'
+```
+
+#### markdown
+
+```handlebars
+{{{markdown '# Foo'}}}
+```
+
 #### pad
 
 ```handlebars
