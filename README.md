@@ -222,8 +222,11 @@ Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text in
 
 #### startCase
 
+A naive version of “Title Case” which simply upper cases the first letter of each word.
+
 ```handlebars
-{{startCase '--foo-bar'}} // Foo Bar
+{{startCase '--foo-bar'}}
+<!-- Foo Bar -->
 ```
 
 #### trim
@@ -269,7 +272,8 @@ Utilizes [Showdown](https://github.com/showdownjs/showdown) to transform text in
 #### unescape
 
 ```handlebars
-{{unescape 'fred, barney, &amp; pebbles'}} // fred, barney, & pebbles
+{{unescape 'fred, barney, &amp; pebbles'}}
+<!-- fred, barney, & pebbles -->
 ```
 
 #### words
