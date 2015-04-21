@@ -63,13 +63,14 @@ createLintTask('lint-test', ['test/**/*.js']);
 gulp.task('build', ['lint-src', 'clean'], function(done) {
   esperanto.bundle({
     base: 'lib',
-    entry: config.entryFileName,
+    entry: config.entryFileName
   }).then(function(bundle) {
     var res = bundle.toUmd({
       sourceMap: true,
       sourceMapSource: config.entryFileName + '.js',
       sourceMapFile: exportFileName + '.js',
-      name: config.exportVarName
+      name: config.exportVarName,
+      strict: true
     });
 
     // Write the generated sourcemap
