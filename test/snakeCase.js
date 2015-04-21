@@ -1,4 +1,4 @@
-const snakeCase = require('../index').helpers.snakeCase;
+const snakeCase = require('../lib').helpers.snakeCase;
 const assert = require('assert');
 
 describe('snakeCase', function () {

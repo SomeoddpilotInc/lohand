@@ -1,4 +1,4 @@
-const camelCase = require('../index').helpers.camelCase;
+const camelCase = require('../lib').helpers.camelCase;
 const assert = require('assert');
 
 describe('camelCase', function () {

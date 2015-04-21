@@ -1,4 +1,4 @@
-const kebabCase = require('../index').helpers.kebabCase;
+const kebabCase = require('../lib').helpers.kebabCase;
 const assert = require('assert');
 
 describe('kebabCase', function () {

@@ -1,4 +1,4 @@
-const size = require('../index').helpers.size;
+const size = require('../lib').helpers.size;
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

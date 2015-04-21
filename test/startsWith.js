@@ -1,4 +1,4 @@
-const startsWith = require('../index').helpers.startsWith;
+const startsWith = require('../lib').helpers.startsWith;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

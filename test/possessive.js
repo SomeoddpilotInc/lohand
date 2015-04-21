@@ -1,4 +1,4 @@
-const possessive = require('../index').helpers.possessive;
+const possessive = require('../lib').helpers.possessive;
 const assert = require('assert');
 
 describe('possessive', function () {

@@ -1,4 +1,4 @@
-const eq = require('../index').helpers.eq;
+const eq = require('../lib').helpers.eq;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

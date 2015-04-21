@@ -1,4 +1,4 @@
-const compact = require('../index').helpers.compact;
+const compact = require('../lib').helpers.compact;
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

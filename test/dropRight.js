@@ -1,4 +1,4 @@
-const dropRight = require('../index').helpers.dropRight;
+const dropRight = require('../lib').helpers.dropRight;
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

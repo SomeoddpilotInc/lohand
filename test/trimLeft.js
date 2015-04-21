@@ -1,4 +1,4 @@
-const trimLeft = require('../index').helpers.trimLeft;
+const trimLeft = require('../lib').helpers.trimLeft;
 const assert = require('assert');
 
 describe('trimLeft', function () {

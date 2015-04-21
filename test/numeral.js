@@ -1,4 +1,4 @@
-const numeral = require('../index').helpers.numeral;
+const numeral = require('../lib').helpers.numeral;
 const assert = require('assert');
 
 describe('numeral', function () {

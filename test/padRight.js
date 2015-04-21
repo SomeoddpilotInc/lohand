@@ -1,4 +1,4 @@
-const padRight = require('../index').helpers.padRight;
+const padRight = require('../lib').helpers.padRight;
 const assert = require('assert');
 
 describe('padRight', function () {

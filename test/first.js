@@ -1,4 +1,4 @@
-const first = require('../index').helpers.first;
+const first = require('../lib').helpers.first;
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

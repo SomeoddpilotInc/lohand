@@ -1,4 +1,4 @@
-const iter = require('../index').helpers.iter;
+const iter = require('../lib').helpers.iter;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

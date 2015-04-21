@@ -1,4 +1,4 @@
-const capitalize = require('../index').helpers.capitalize;
+const capitalize = require('../lib').helpers.capitalize;
 const assert = require('assert');
 
 describe('capitalize', function () {

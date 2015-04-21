@@ -1,4 +1,4 @@
-const flatten = require('../index').helpers.flatten;
+const flatten = require('../lib').helpers.flatten;
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

@@ -1,4 +1,4 @@
-const chunk = require('../index').helpers.chunk;
+const chunk = require('../lib').helpers.chunk;
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

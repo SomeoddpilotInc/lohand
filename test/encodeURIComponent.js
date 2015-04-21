@@ -1,4 +1,4 @@
-const encodeURIComponentHelper = require('../index').helpers.encodeURIComponent;
+const encodeURIComponentHelper = require('../lib').helpers.encodeURIComponent;
 const assert = require('assert');
 
 describe('encodeURIComponent', function () {

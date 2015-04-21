@@ -1,4 +1,4 @@
-const every = require('../index').helpers.every;
+const every = require('../lib').helpers.every;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

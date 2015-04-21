@@ -1,4 +1,4 @@
-const trimRight = require('../index').helpers.trimRight;
+const trimRight = require('../lib').helpers.trimRight;
 const assert = require('assert');
 
 describe('trimRight', function () {

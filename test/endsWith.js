@@ -1,4 +1,4 @@
-const endsWith = require('../index').helpers.endsWith;
+const endsWith = require('../lib').helpers.endsWith;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

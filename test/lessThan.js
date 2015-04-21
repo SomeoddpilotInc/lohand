@@ -1,4 +1,4 @@
-const lessThan = require('../index').helpers.lessThan;
+const lessThan = require('../lib').helpers.lessThan;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

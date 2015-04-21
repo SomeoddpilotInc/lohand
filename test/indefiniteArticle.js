@@ -1,4 +1,4 @@
-const indefiniteArticle = require('../index').helpers.indefiniteArticle;
+const indefiniteArticle = require('../lib').helpers.indefiniteArticle;
 const assert = require('assert');
 
 describe('indefiniteArticle', function () {

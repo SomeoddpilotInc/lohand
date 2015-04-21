@@ -1,4 +1,4 @@
-const pad = require('../index').helpers.pad;
+const pad = require('../lib').helpers.pad;
 const assert = require('assert');
 
 describe('pad', function () {

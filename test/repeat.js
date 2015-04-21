@@ -1,4 +1,4 @@
-const repeat = require('../index').helpers.repeat;
+const repeat = require('../lib').helpers.repeat;
 const assert = require('assert');
 
 describe('repeat', function () {

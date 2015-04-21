@@ -1,4 +1,4 @@
-const unescape = require('../index').helpers.unescape;
+const unescape = require('../lib').helpers.unescape;
 const assert = require('assert');
 
 describe('unescape', function () {

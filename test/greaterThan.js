@@ -1,4 +1,4 @@
-const greaterThan = require('../index').helpers.greaterThan;
+const greaterThan = require('../lib').helpers.greaterThan;
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

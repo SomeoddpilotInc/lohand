@@ -1,4 +1,4 @@
-const deburr = require('../index').helpers.deburr;
+const deburr = require('../lib').helpers.deburr;
 const assert = require('assert');
 
 describe('deburr', function () {

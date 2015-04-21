@@ -1,4 +1,4 @@
-const words = require('../index').helpers.words;
+const words = require('../lib').helpers.words;
 const assert = require('assert');
 
 describe('words', function () {

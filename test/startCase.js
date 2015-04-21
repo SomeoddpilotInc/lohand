@@ -1,4 +1,4 @@
-const startCase = require('../index').helpers.startCase;
+const startCase = require('../lib').helpers.startCase;
 const assert = require('assert');
 
 describe('startCase', function () {

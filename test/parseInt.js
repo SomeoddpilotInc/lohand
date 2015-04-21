@@ -1,4 +1,4 @@
-const parseInteger = require('../index').helpers.parseInt;
+const parseInteger = require('../lib').helpers.parseInt;
 const assert = require('assert');
 
 describe('parseInt', function () {

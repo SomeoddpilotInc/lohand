@@ -1,4 +1,4 @@
-const trunc = require('../index').helpers.trunc;
+const trunc = require('../lib').helpers.trunc;
 const assert = require('assert');
 
 describe('trunc', function () {
