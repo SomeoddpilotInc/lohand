@@ -1,4 +1,4 @@
-const at = require('../index').helpers.at;
+const at = require('./../lib').helpers.at;
 const assert = require('chai').assert;
 
 describe('at', function () {
