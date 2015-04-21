@@ -1,3 +1,5 @@
 .travis.yml
 plato
 coverage.html
+docs
+coverage
