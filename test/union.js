@@ -1,4 +1,4 @@
-const union = require('../lib').helpers.union;
+import {union} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

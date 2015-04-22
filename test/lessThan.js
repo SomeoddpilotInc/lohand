@@ -1,4 +1,4 @@
-const lessThan = require('../lib').helpers.lessThan;
+import {lessThan} from './../lib/helpers';
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

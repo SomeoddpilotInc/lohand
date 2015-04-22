@@ -1,4 +1,4 @@
-const flatten = require('../lib').helpers.flatten;
+import {flatten} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

@@ -1,4 +1,4 @@
-const sample = require('../lib').helpers.sample;
+import {sample} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

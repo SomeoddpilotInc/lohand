@@ -1,4 +1,4 @@
-const shuffle = require('../lib').helpers.shuffle;
+import {shuffle} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

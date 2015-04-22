@@ -1,4 +1,4 @@
-const startCase = require('../lib').helpers.startCase;
+import {startCase} from './../lib/helpers';
 const assert = require('assert');
 
 describe('startCase', function () {

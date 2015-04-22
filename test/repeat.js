@@ -1,4 +1,4 @@
-const repeat = require('../lib').helpers.repeat;
+import {repeat} from './../lib/helpers';
 const assert = require('assert');
 
 describe('repeat', function () {

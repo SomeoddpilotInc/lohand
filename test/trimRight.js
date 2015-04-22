@@ -1,4 +1,4 @@
-const trimRight = require('../lib').helpers.trimRight;
+import {trimRight} from './../lib/helpers';
 const assert = require('assert');
 
 describe('trimRight', function () {

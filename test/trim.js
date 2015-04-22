@@ -1,4 +1,4 @@
-const trim = require('../lib').helpers.trim;
+import {trim} from './../lib/helpers';
 const assert = require('assert');
 
 describe('trim', function () {

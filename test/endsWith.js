@@ -1,4 +1,4 @@
-const endsWith = require('../lib').helpers.endsWith;
+import {endsWith} from './../lib/helpers';
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

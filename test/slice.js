@@ -1,4 +1,4 @@
-const slice = require('../lib').helpers.slice;
+import {slice} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

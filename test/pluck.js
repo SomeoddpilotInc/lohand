@@ -1,4 +1,4 @@
-const pluck = require('../lib').helpers.pluck;
+import {pluck} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

@@ -1,4 +1,4 @@
-const kebabCase = require('../lib').helpers.kebabCase;
+import {kebabCase} from './../lib/helpers';
 const assert = require('assert');
 
 describe('kebabCase', function () {

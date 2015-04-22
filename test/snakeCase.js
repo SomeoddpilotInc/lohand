@@ -1,4 +1,4 @@
-const snakeCase = require('../lib').helpers.snakeCase;
+import {snakeCase} from './../lib/helpers';
 const assert = require('assert');
 
 describe('snakeCase', function () {

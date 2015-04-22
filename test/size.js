@@ -1,4 +1,4 @@
-const size = require('../lib').helpers.size;
+import {size} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

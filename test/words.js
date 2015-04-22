@@ -1,4 +1,4 @@
-const words = require('../lib').helpers.words;
+import {words} from './../lib/helpers';
 const assert = require('assert');
 
 describe('words', function () {

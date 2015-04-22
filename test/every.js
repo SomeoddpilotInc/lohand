@@ -1,4 +1,4 @@
-const every = require('../lib').helpers.every;
+import {every} from './../lib/helpers';
 const assert = require('assert');
 const Spy = require('sinon').spy;
 

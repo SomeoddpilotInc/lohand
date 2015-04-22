@@ -1,4 +1,4 @@
-const padLeft = require('../lib').helpers.padLeft;
+import {padLeft} from './../lib/helpers';
 const assert = require('assert');
 
 describe('padLeft', function () {

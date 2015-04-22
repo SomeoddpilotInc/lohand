@@ -1,4 +1,4 @@
-const possessive = require('../lib').helpers.possessive;
+import {possessive} from './../lib/helpers';
 const assert = require('assert');
 
 describe('possessive', function () {

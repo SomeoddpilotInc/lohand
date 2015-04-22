@@ -1,4 +1,4 @@
-const number = require('../lib').helpers.number;
+import {number} from './../lib/helpers';
 const assert = require('assert');
 
 describe('number', function () {

@@ -1,4 +1,4 @@
-const first = require('../lib').helpers.first;
+import {first} from './../lib/helpers';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

@@ -1,4 +1,4 @@
-const pad = require('../lib').helpers.pad;
+import {pad} from './../lib/helpers';
 const assert = require('assert');
 
 describe('pad', function () {

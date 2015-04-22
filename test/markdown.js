@@ -1,4 +1,4 @@
-const markdown = require('../lib').helpers.markdown;
+import {markdown} from './../lib/helpers';
 const assert = require('assert');
 
 describe('markdown', function () {
