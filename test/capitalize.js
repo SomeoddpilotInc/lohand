@@ -1,9 +1,9 @@
 import {capitalize} from './../lib/helpers/lodash';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('capitalize', function () {
   it('should capitalize text', function () {
-    assert.equal(capitalize('fred'), 'Fred');
-    assert.equal(capitalize('fred flintstone'), 'Fred flintstone');
+    expect(capitalize('fred')).to.equal('Fred');
+    expect(capitalize('fred flintstone')).to.equal('Fred flintstone');
   });
 });

@@ -1,8 +1,8 @@
 import {deburr} from './../lib/helpers/lodash';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('deburr', function () {
   it('should deburr text', function () {
-    assert.equal(deburr('déjà vu'), 'deja vu');
+    expect(deburr('déjà vu')).to.equal('deja vu');
   });
 });
