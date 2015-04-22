@@ -2,7 +2,7 @@ import {at} from './../lib/helpers/lodash';
 const expect = require('chai').expect;
 
 describe('at', () => {
-  it('should find element at lib', () => {
+  it('should find element at props', () => {
     expect(at(['Foo Bar'], 1))
       .to.deep.equal([undefined]);
 
