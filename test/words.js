@@ -1,10 +1,9 @@
 import {words} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
-describe('words', function () {
+describe('words helper', function () {
   it('should split words into array', function () {
-    assert.equal(words('Fred, Barney, & Pebbles')[0], 'Fred');
-    assert.equal(words('Fred, Barney, & Pebbles')[1], 'Barney');
-    assert.equal(words('Fred, Barney, & Pebbles')[2], 'Pebbles');
+    expect(words('Fred, Barney, & Pebbles'))
+      .to.deep.equal(['Fred', 'Barney', 'Pebbles']);
   });
 });
