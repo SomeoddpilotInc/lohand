@@ -1,10 +1,15 @@
 import {at} from './../lib/helpers/lodash';
-const assert = require('chai').assert;
+const expect = require('chai').expect;
 
-describe('at', function () {
-  it('should find element at lib', function () {
-    assert.deepEqual(at(['Foo Bar'], 1), [undefined]);
-    assert.deepEqual(at([1, 2, 3], 1), [2]);
-    assert.deepEqual(at([1, 2, 3], [1, 2]), [2, 3]);
+describe('at', () => {
+  it('should find element at lib', () => {
+    expect(at(['Foo Bar'], 1))
+      .to.deep.equal([undefined]);
+
+    expect(at([1, 2, 3], 1))
+      .to.deep.equal([2]);
+
+    expect(at([1, 2, 3], [1, 2]))
+      .to.deep.equal([2, 3]);
   });
 });
