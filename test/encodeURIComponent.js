@@ -1,4 +1,4 @@
-const encodeURIComponentHelper = require('../lib').helpers.encodeURIComponent;
+import {encodeURIComponent as encodeURIComponentHelper} from './../lib/helpers';
 const assert = require('assert');
 
 describe('encodeURIComponent', function () {

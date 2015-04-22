@@ -1,4 +1,4 @@
-const deburr = require('../lib').helpers.deburr;
+import {deburr} from './../lib/helpers/lodash';
 const assert = require('assert');
 
 describe('deburr', function () {

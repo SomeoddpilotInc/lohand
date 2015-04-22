@@ -1,4 +1,4 @@
-const capitalize = require('../lib').helpers.capitalize;
+import {capitalize} from './../lib/helpers/lodash';
 const assert = require('assert');
 
 describe('capitalize', function () {

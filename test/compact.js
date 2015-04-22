@@ -1,4 +1,4 @@
-const compact = require('../lib').helpers.compact;
+import {compact} from './../lib/helpers/lodash';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

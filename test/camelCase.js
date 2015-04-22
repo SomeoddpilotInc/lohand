@@ -1,4 +1,4 @@
-const camelCase = require('../lib').helpers.camelCase;
+import {camelCase} from './../lib/helpers/lodash';
 const assert = require('assert');
 
 describe('camelCase', function () {

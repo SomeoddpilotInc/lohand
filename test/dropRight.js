@@ -1,4 +1,4 @@
-const dropRight = require('../lib').helpers.dropRight;
+import {dropRight} from './../lib/helpers/lodash';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 

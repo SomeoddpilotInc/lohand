@@ -1,4 +1,4 @@
-const at = require('./../lib').helpers.at;
+import {at} from './../lib/helpers/lodash';
 const assert = require('chai').assert;
 
 describe('at', function () {

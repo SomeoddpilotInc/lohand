@@ -1,4 +1,4 @@
-const chunk = require('../lib').helpers.chunk;
+import {chunk} from './../lib/helpers/lodash';
 const assert = require('chai').assert;
 const handlebars = require('handlebars');
 
