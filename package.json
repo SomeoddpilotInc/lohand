@@ -48,7 +48,7 @@
     "indefinite-article": "0.0.2",
     "lodash": "^3.6.0",
     "numeral": "^1.5.3",
-    "showdown": "^0.4.0"
+    "showdown": "^0.5.0"
   },
   "devDependencies": {
     "babel": "^5.1.11",
