@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:alexsomeoddpilot/lohand.git"
+    "url": "git@github.com:someoddpilotinc/lohand.git"
   },
   "keywords": [
     "block helper",
@@ -41,9 +41,9 @@
   "author": "Alex Robertson <alex@someoddpilot.com>",
   "license": "GNU",
   "bugs": {
-    "url": "https://github.com/alexsomeoddpilot/lohand/issues"
+    "url": "https://github.com/someoddpilotinc/lohand/issues"
   },
-  "homepage": "https://github.com/alexsomeoddpilot/lohand",
+  "homepage": "https://github.com/someoddpilotinc/lohand",
   "dependencies": {
     "indefinite-article": "0.0.2",
     "lodash": "^3.6.0",

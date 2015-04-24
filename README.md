@@ -1,9 +1,9 @@
 # Lohand
 
 [![npm version](https://badge.fury.io/js/lohand.svg)](http://badge.fury.io/js/lohand)
-[![Build Status](https://travis-ci.org/alexsomeoddpilot/lohand.svg?branch=master)](https://travis-ci.org/alexsomeoddpilot/lohand)
-[![Dependency Status](https://david-dm.org/alexsomeoddpilot/lohand.svg)](https://david-dm.org/alexsomeoddpilot/lohand)
-[![devDependency Status](https://david-dm.org/alexsomeoddpilot/lohand/dev-status.svg)](https://david-dm.org/alexsomeoddpilot/lohand#info=devDependencies)
+[![Build Status](https://travis-ci.org/someoddpilotinc/lohand.svg?branch=master)](https://travis-ci.org/someoddpilotinc/lohand)
+[![Dependency Status](https://david-dm.org/someoddpilotinc/lohand.svg)](https://david-dm.org/someoddpilotinc/lohand)
+[![devDependency Status](https://david-dm.org/someoddpilotinc/lohand/dev-status.svg)](https://david-dm.org/someoddpilotinc/lohand#info=devDependencies)
 
 A library for wrapping many Lodash functions into Handlebars.
 
