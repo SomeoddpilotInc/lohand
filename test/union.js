@@ -1,6 +1,6 @@
 import {union} from './../lib/helpers';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('union', function () {
   it('should union arrays', function () {
@@ -14,8 +14,8 @@ describe('union', function () {
       b: b
     });
 
-    assert.equal(result, '1,2,3,4,5,a,b,c');
+    expect(result).to.equal('1,2,3,4,5,a,b,c');
 
-    assert.deepEqual(union(a, b), [1, 2, 3, 4, 5, 'a', 'b', 'c']);
+    expect(union(a, b)).to.deep.equal([1, 2, 3, 4, 5, 'a', 'b', 'c']);
   });
 });
