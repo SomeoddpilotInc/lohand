@@ -1,5 +1,5 @@
 import {at} from './../lib/helpers/lodash';
-const expect = require('chai').expect;
+import {expect} from 'chai';
 
 describe('at', () => {
   it('should find element at props', () => {

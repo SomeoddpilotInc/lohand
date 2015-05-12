@@ -1,6 +1,6 @@
 import {flatten} from './../lib/helpers';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('flatten', function () {
   it('should flatten arrays', function () {
@@ -15,9 +15,9 @@ describe('flatten', function () {
       collection: collection
     });
 
-    assert.equal(result, '1:2:3:4');
+    expect(result).to.equal('1:2:3:4');
 
-    assert.deepEqual(flatten(collection), [1, 2, 3, [4]]);
+    expect(flatten(collection)).to.deep.equal([1, 2, 3, [4]]);
   });
 
   it('should flatten arrays deeply', function () {
@@ -32,8 +32,8 @@ describe('flatten', function () {
       collection: collection
     });
 
-    assert.equal(result, '1:2:3:4');
+    expect(result).to.equal('1:2:3:4');
 
-    assert.deepEqual(flatten(collection, true), [1, 2, 3, 4]);
+    expect(flatten(collection, true)).to.deep.equal([1, 2, 3, 4]);
   });
 });

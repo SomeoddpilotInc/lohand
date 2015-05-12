@@ -1,6 +1,6 @@
 import {dropRight} from './../lib/helpers/lodash';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('dropRight', function () {
   it('should dropRight from left of arrays', function () {
@@ -10,9 +10,9 @@ describe('dropRight', function () {
       collection: [1, 2, 3]
     });
 
-    assert.equal(result, '1,2');
+    expect(result).to.equal('1,2');
 
-    assert.deepEqual(dropRight([1, 2, 3]), [1, 2]);
+    expect(dropRight([1, 2, 3])).to.deep.equal([1, 2]);
   });
 
   it('should dropRight multiple from left of arrays', function () {
@@ -22,8 +22,8 @@ describe('dropRight', function () {
       collection: [1, 2, 3]
     });
 
-    assert.equal(result, '1');
+    expect(result).to.equal('1');
 
-    assert.deepEqual(dropRight([1, 2, 3], 2), [1]);
+    expect(dropRight([1, 2, 3], 2)).to.deep.equal([1]);
   });
 });

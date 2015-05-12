@@ -1,6 +1,6 @@
 import {first} from './../lib/helpers';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('first', function () {
   it('should select first from array', function () {
@@ -10,8 +10,8 @@ describe('first', function () {
       collection: [1, 2, 3]
     });
 
-    assert.equal(result, '1');
+    expect(result).to.equal('1');
 
-    assert.deepEqual(first([1, 2, 3]), 1);
+    expect(first([1, 2, 3])).to.deep.equal(1);
   });
 });

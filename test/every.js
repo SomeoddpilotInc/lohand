@@ -1,6 +1,6 @@
 import {every} from './../lib/helpers';
-const assert = require('assert');
-const Spy = require('sinon').spy;
+import {expect} from 'chai';
+import {spy as Spy} from 'sinon';
 
 describe('every', function () {
   it('should call fn every n', function () {
@@ -21,9 +21,9 @@ describe('every', function () {
       hash: {}
     });
 
-    assert.equal(fnSpy.calledOnce, true, 'only call normal once');
-    assert.equal(inverseSpy.calledTwice, true, 'call inverse two times');
-    assert.equal(result, 'truefalsefalse');
+    expect(fnSpy.calledOnce).to.be.true;
+    expect(inverseSpy.calledTwice).to.be.true;
+    expect(result).to.equal('truefalsefalse');
   });
 
   it('should respect offset', function () {
@@ -46,8 +46,8 @@ describe('every', function () {
       }
     });
 
-    assert.equal(fnSpy.calledOnce, true, 'only call normal once');
-    assert.equal(inverseSpy.calledTwice, true, 'call inverse two times');
-    assert.equal(result, 'falsetruefalse');
+    expect(fnSpy.calledOnce).to.be.true;
+    expect(inverseSpy.calledTwice).to.be.true;
+    expect(result).to.equal('falsetruefalse');
   });
 });

@@ -1,6 +1,6 @@
 import {compact} from './../lib/helpers/lodash';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('compact', function () {
   it('should compact arrays', function () {
@@ -10,8 +10,8 @@ describe('compact', function () {
       collection: [0, 1, false, 2, '', 3]
     });
 
-    assert.equal(result, '1,2,3');
+    expect(result).to.equal('1,2,3');
 
-    assert.deepEqual(compact([0, 1, false, 2, '', 3]), [1, 2, 3]);
+    expect(compact([0, 1, false, 2, '', 3])).to.deep.equal([1, 2, 3]);
   });
 });

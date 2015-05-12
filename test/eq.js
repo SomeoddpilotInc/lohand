@@ -1,6 +1,6 @@
 import {eq} from './../lib/helpers';
-const assert = require('assert');
-const Spy = require('sinon').spy;
+import {expect} from 'chai';
+import {spy as Spy} from 'sinon';
 
 describe('eq', function () {
   it('should eq text', function () {
@@ -10,8 +10,7 @@ describe('eq', function () {
       inverse: inverseSpy
     });
 
-    assert.equal(inverseSpy.calledOnce, true);
-    assert.equal(inverseSpy.calledOnce, true);
+    expect(inverseSpy.calledOnce).to.be.true;
   });
 
   it('should eq text', function () {
@@ -21,7 +20,6 @@ describe('eq', function () {
       fn: fnSpy
     });
 
-    assert.equal(fnSpy.calledOnce, true);
-    assert.equal(fnSpy.calledOnce, true);
+    expect(fnSpy.calledOnce).to.be.true;
   });
 });
