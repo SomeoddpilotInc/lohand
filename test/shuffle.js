@@ -1,6 +1,6 @@
 import {shuffle} from './../lib/helpers';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('shuffle', function () {
   it('should shuffle arrays', function () {
@@ -10,8 +10,8 @@ describe('shuffle', function () {
       collection: [1, 2, 3]
     });
 
-    assert.equal(result.length, 5);
+    expect(result.length).to.equal(5);
 
-    assert.equal(shuffle([1, 2, 3]).length, 3);
+    expect(shuffle([1, 2, 3]).length).to.equal(3);
   });
 });

@@ -1,9 +1,9 @@
 import {possessive} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('possessive', function () {
   it('should possessive text', function () {
-    assert.equal(possessive('Foo Bar'), 'Foo Bar’s');
-    assert.equal(possessive('Sisters'), 'Sisters’');
+    expect(possessive('Foo Bar')).to.equal('Foo Bar’s');
+    expect(possessive('Sisters')).to.equal('Sisters’');
   });
 });

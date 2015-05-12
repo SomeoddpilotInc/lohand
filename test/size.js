@@ -1,6 +1,6 @@
 import {size} from './../lib/helpers';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('size', function () {
   it('should size arrays', function () {
@@ -16,8 +16,8 @@ describe('size', function () {
       collection: object
     });
 
-    assert.equal(result, 3);
+    expect(result).to.equal('3');
 
-    assert.equal(size(object), 3);
+    expect(size(object)).to.equal(3);
   });
 });

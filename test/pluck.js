@@ -1,6 +1,6 @@
 import {pluck} from './../lib/helpers';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('pluck', function () {
   it('should pluck arrays', function () {
@@ -11,8 +11,8 @@ describe('pluck', function () {
       toPluck: 'user'
     });
 
-    assert.equal(result, 'foo');
+    expect(result).to.equal('foo');
 
-    assert.deepEqual(pluck([{user: 'foo'}], 'user'), ['foo']);
+    expect(pluck([{user: 'foo'}], 'user')).to.deep.equal(['foo']);
   });
 });

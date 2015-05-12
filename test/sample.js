@@ -1,6 +1,6 @@
 import {sample} from './../lib/helpers';
-const assert = require('chai').assert;
-const handlebars = require('handlebars');
+import {expect} from 'chai';
+import handlebars from 'handlebars';
 
 describe('sample', function () {
   it('should sample arrays', function () {
@@ -10,8 +10,8 @@ describe('sample', function () {
       collection: [1, 2, 3]
     });
 
-    assert.equal(result.length, 3);
+    expect(result.length).to.equal(3);
 
-    assert.equal(sample([1, 2, 3], 3).length, 3);
+    expect(sample([1, 2, 3], 3).length).to.equal(3);
   });
 });
