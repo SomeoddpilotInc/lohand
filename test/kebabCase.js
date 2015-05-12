@@ -1,11 +1,11 @@
 import {kebabCase} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('kebabCase', function () {
   it('should kebabCase text', function () {
-    assert.equal(kebabCase('Foo Bar'), 'foo-bar');
-    assert.equal(kebabCase('fooBar'), 'foo-bar');
-    assert.equal(kebabCase('--foo-bar'), 'foo-bar');
-    assert.equal(kebabCase('__foo_bar__'), 'foo-bar');
+    expect(kebabCase('Foo Bar')).to.equal('foo-bar');
+    expect(kebabCase('fooBar')).to.equal('foo-bar');
+    expect(kebabCase('--foo-bar')).to.equal('foo-bar');
+    expect(kebabCase('__foo_bar__')).to.equal('foo-bar');
   });
 });

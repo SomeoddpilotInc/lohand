@@ -1,10 +1,10 @@
 import {padRight} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('padRight', function () {
   it('should padRight text', function () {
-    assert.equal(padRight('abc', 6), 'abc   ');
-    assert.equal(padRight('abc', 6, '_-'), 'abc_-_');
-    assert.equal(padRight('abc', 3), 'abc');
+    expect(padRight('abc', 6)).to.equal('abc   ');
+    expect(padRight('abc', 6, '_-')).to.equal('abc_-_');
+    expect(padRight('abc', 3)).to.equal('abc');
   });
 });

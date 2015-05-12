@@ -1,10 +1,10 @@
 import {parseInt as parseInteger} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('parseInt', function () {
   it('should parseInt text', function () {
-    assert.equal(parseInteger('08'), 8);
-    assert.equal(parseInteger('6'), 6);
-    assert.equal(parseInteger('10'), 10);
+    expect(parseInteger('08')).to.equal(8);
+    expect(parseInteger('6')).to.equal(6);
+    expect(parseInteger('10')).to.equal(10);
   });
 });

@@ -1,6 +1,6 @@
 import {iter} from './../lib/helpers';
-const assert = require('assert');
-const Spy = require('sinon').spy;
+import {expect} from 'chai';
+import {spy as Spy} from 'sinon';
 
 describe('iter', function () {
   it('should iter text', function () {
@@ -12,8 +12,7 @@ describe('iter', function () {
       fn: fnSpy
     });
 
-    assert.equal(fnSpy.calledOnce, true);
-    assert.equal(fnSpy.calledOnce, true);
+    expect(fnSpy.calledOnce).to.be.true;
   });
 
   it('should iter text', function () {
@@ -23,7 +22,6 @@ describe('iter', function () {
       inverse: inverseSpy
     });
 
-    assert.equal(inverseSpy.calledOnce, true);
-    assert.equal(inverseSpy.calledOnce, true);
+    expect(inverseSpy.calledOnce).to.be.true;
   });
 });

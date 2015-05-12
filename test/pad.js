@@ -1,10 +1,10 @@
 import {pad} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('pad', function () {
   it('should pad text', function () {
-    assert.equal(pad('abc', 8), '  abc   ');
-    assert.equal(pad('abc', 8, '_-'), '_-abc_-_');
-    assert.equal(pad('abc', 3), 'abc');
+    expect(pad('abc', 8)).to.equal('  abc   ');
+    expect(pad('abc', 8, '_-')).to.equal('_-abc_-_');
+    expect(pad('abc', 3)).to.equal('abc');
   });
 });
