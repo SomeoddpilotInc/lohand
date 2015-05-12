@@ -1,6 +1,6 @@
 {
   "name": "lohand",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "A library for wrapping Lodash functions into Handlebars",
   "readme": "`npm install lohand -S`",
   "main": "dist/index.js",
