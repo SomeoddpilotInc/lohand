@@ -1,6 +1,6 @@
 import {greaterThan} from './../lib/helpers';
-const assert = require('assert');
-const Spy = require('sinon').spy;
+import {expect} from 'chai';
+import {spy as Spy} from 'sinon';
 
 describe('greaterThan', function () {
   it('should call fn when true', function () {
@@ -11,7 +11,7 @@ describe('greaterThan', function () {
       fn: fnSpy,
       inverse: inverseSpy
     });
-    assert.equal(fnSpy.calledOnce, true);
-    assert.equal(inverseSpy.called, false);
+    expect(fnSpy.calledOnce).to.be.true;
+    expect(inverseSpy.called).to.be.false;
   });
 });
