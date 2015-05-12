@@ -1,10 +1,10 @@
 import {trimRight} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('trimRight', function () {
   it('should trimRight text', function () {
-    assert.equal(trimRight('   abc   '), '   abc');
-    assert.equal(trimRight('-_-abc-_-', '_-'), '-_-abc');
-    assert.equal(trimRight('-_-abc-_-'), '-_-abc-_-');
+    expect(trimRight('   abc   ')).to.equal('   abc');
+    expect(trimRight('-_-abc-_-', '_-')).to.equal('-_-abc');
+    expect(trimRight('-_-abc-_-')).to.equal('-_-abc-_-');
   });
 });
