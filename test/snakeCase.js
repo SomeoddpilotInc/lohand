@@ -1,11 +1,14 @@
 import {snakeCase} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
+/**
+ * Snekcase
+ */
 describe('snakeCase', function () {
   it('should snakeCase text', function () {
-    assert.equal(snakeCase('Foo Bar'), 'foo_bar');
-    assert.equal(snakeCase('fooBar'), 'foo_bar');
-    assert.equal(snakeCase('--foo-bar'), 'foo_bar');
-    assert.equal(snakeCase('__foo_bar__'), 'foo_bar');
+    expect(snakeCase('Foo Bar')).to.equal('foo_bar');
+    expect(snakeCase('fooBar')).to.equal('foo_bar');
+    expect(snakeCase('--foo-bar')).to.equal('foo_bar');
+    expect(snakeCase('__foo_bar__')).to.equal('foo_bar');
   });
 });

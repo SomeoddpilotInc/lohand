@@ -1,12 +1,12 @@
 import {trunc} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('trunc', function () {
   it('should trunc text', function () {
-    assert.equal(trunc('hi-diddly-ho there, neighborino'), 'hi-diddly-ho there, neighbo...');
-    assert.equal(trunc('hi-diddly-ho there, neighborino', 24), 'hi-diddly-ho there, n...');
-    assert.equal(trunc('hi-diddly-ho there, neighborino', {length: 24, separator: ' '}), 'hi-diddly-ho there,...');
-    assert.equal(trunc('hi-diddly-ho there, neighborino', {length: 24, separator: '/,? +/'}), 'hi-diddly-ho there, n...');
-    assert.equal(trunc('hi-diddly-ho there, neighborino', {omission: ' […]'}), 'hi-diddly-ho there, neighb […]');
+    expect(trunc('hi-diddly-ho there, neighborino')).to.equal('hi-diddly-ho there, neighbo...');
+    expect(trunc('hi-diddly-ho there, neighborino', 24)).to.equal('hi-diddly-ho there, n...');
+    expect(trunc('hi-diddly-ho there, neighborino', {length: 24, separator: ' '})).to.equal('hi-diddly-ho there,...');
+    expect(trunc('hi-diddly-ho there, neighborino', {length: 24, separator: '/,? +/'})).to.equal('hi-diddly-ho there, n...');
+    expect(trunc('hi-diddly-ho there, neighborino', {omission: ' […]'})).to.equal('hi-diddly-ho there, neighb […]');
   });
 });

@@ -1,10 +1,10 @@
 import {startCase} from './../lib/helpers';
-const assert = require('assert');
+import {expect} from 'chai';
 
 describe('startCase', function () {
   it('should startCase text', function () {
-    assert.equal(startCase('Foo Bar'), 'Foo Bar');
-    assert.equal(startCase('--foo-bar'), 'Foo Bar');
-    assert.equal(startCase('__foo_bar__'), 'Foo Bar');
+    expect(startCase('Foo Bar')).to.equal('Foo Bar');
+    expect(startCase('--foo-bar')).to.equal('Foo Bar');
+    expect(startCase('__foo_bar__')).to.equal('Foo Bar');
   });
 });

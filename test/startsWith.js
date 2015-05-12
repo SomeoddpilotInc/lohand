@@ -1,27 +1,27 @@
 import {startsWith} from './../lib/helpers';
-const assert = require('assert');
-const Spy = require('sinon').spy;
+import {expect} from 'chai';
+import {spy as Spy} from 'sinon';
 
 describe('startsWith', function () {
   it('should call fn when true', function () {
     var fnSpy = new Spy();
 
-    assert.equal(startsWith('abc', 'a', {
+    startsWith('abc', 'a', {
       fn: fnSpy,
       hash: {}
-    }));
+    });
 
-    assert.equal(fnSpy.calledOnce, true);
+    expect(fnSpy.calledOnce).to.be.true;
   });
 
   it('should call inverse when false', function () {
     var inverseSpy = new Spy();
 
-    assert.equal(startsWith('abc', 'b', {
+    startsWith('abc', 'b', {
       inverse: inverseSpy,
       hash: {}
-    }));
+    });
 
-    assert.equal(inverseSpy.calledOnce, true);
+    expect(inverseSpy.calledOnce).to.be.true;
   });
 });
