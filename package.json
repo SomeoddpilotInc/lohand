@@ -72,7 +72,7 @@
     "gulp-plumber": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglifyjs": "^0.6.2",
+    "gulp-uglify": "^1.2.0",
     "handlebars": "^3.0.1",
     "isparta": "^3.0.3",
     "istanbul": "^0.3.14",
