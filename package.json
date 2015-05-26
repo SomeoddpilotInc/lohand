@@ -46,7 +46,7 @@
   "homepage": "https://github.com/someoddpilotinc/lohand",
   "dependencies": {
     "indefinite-article": "0.0.2",
-    "lodash": "^3.6.0",
+    "lodash": "^3.9.3",
     "numeral": "^1.5.3",
     "showdown": "^0.5.0"
   },
@@ -76,7 +76,7 @@
     "handlebars": "^3.0.1",
     "isparta": "^3.0.3",
     "istanbul": "^0.3.14",
-    "jshint-stylish": "^1.0.1",
+    "jshint-stylish": "^2.0.0",
     "mkdirp": "^0.5.0",
     "mocha": "^2.2.4",
     "require-dir": "^0.3.0",
